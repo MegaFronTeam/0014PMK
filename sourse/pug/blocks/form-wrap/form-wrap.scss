@@ -6,6 +6,7 @@
 		&__input{
 			// @extend .form-control;
 		//  outline: 0 !important;
+		@include mt;
 		 resize: none;
  	}
  	&__btn{

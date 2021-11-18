@@ -1,6 +1,136 @@
 // start .sForm
 .sForm {
 	background-color: #23282d;
+	color: $white;
+	--sTPB: #{rem(30)};
+	h2 {
+		text-align: center;
+		line-height: 125%;
+		@include media-breakpoint-up(md) {
+			text-align: left;
+			max-width: 7em;
+		}
+		@include media-breakpoint-up(xxl) {
+			font-size: rem(80);
+		}
+	}
+	.row {
+		--bs-gutter-y: #{rem(30)};
+	}
+	&__row-sm {
+		align-items: center;
+	}
+	&__col {
+		text-align: center;
+		@include media-breakpoint-up(md) {
+			display: flex;
+			align-items: flex-end;
+			text-align: left;
+		}
+	}
+	&__policy {
+		font-size: 16px;
+		line-height: 150%;
+		color: #8d8f93;
+		text-align: center;
+		@include media-breakpoint-up(sm) {
+			font-size: 12px;
+		}
+		@include media-breakpoint-up(md) {
+			text-align: left;
+		}
+		@include media-breakpoint-up(xxl) {
+			font-size: rem(14);
+		}
+		a {
+			&:not(:hover) {
+				color: $white;
+			}
+		}
+	}
+	&__btn-up {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: rem(16);
+		@include media-breakpoint-between(sm, xxl) {
+			font-size: rem(14);
+		}
+		&:hover {
+			span {
+				&:first-child {
+					background-color: $primary;
+				}
+			}
+		}
+		span {
+			@include mt;
+			&:first-child {
+				position: relative;
+				width: rem(50);
+				height: rem(50);
+				border-radius: 50%;
+				background-color: #393D42;
+				@include media-breakpoint-between(sm, xxl) {
+					width: rem(40);
+					height: rem(40);
+				}
+				.icon {
+					@include a-cent;
+					color: $white;
+					font-size: inherit;
+				}
+			}
+			&:last-child {
+				margin-left: rem(20);
+				color: $white;
+			}
+		}
+	}
+	&__btn {
+		@extend .btn, .btn-primary;
+		// display: flex;
+		// align-items: center;
+		// justify-content: center;
+		width: 280px;
+		.icon {
+			font-size: inherit;
+			margin-left: rem(20);
+			@include media-breakpoint-between(sm, xxl) {
+				max-width: rem(20);
+				margin-left: rem(10);
+			}
+		}
+		@include media-breakpoint-between(sm, xxl) {
+			width: 220px;
+			font-size: rem(14);
+			padding: rem(20.5);
+		}
+	}
+	.form-wrap {
+		&__input-wrap {
+			margin-bottom: rem(20);
+			@include media-breakpoint-between(sm, xxl) {
+				margin-bottom: rem(16);
+			}
+			&:last-of-type {
+				margin-bottom: rem(60);
+				@include media-breakpoint-between(sm, xxl) {
+					margin-bottom: rem(50);
+				}
+			}
+		}
+		&__input {
+			font-weight: bold;
+			@include media-breakpoint-between(sm, xxl) {
+				font-size: rem(14);
+				padding: rem(20.5);
+			}
+		}
+		textarea {
+			min-height: rem(140);
+		}
+	}
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {

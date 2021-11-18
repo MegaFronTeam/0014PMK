@@ -2,8 +2,29 @@ mixin sForm()
 	// start sForm
 	+b.SECTION.sForm.section#sForm&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sForm
-				
 			.row
+				.col-md-6
+					+b.section-title
+						h2 Связаться с&nbsp;нами
+				.col-md-6
+					+form-wrap
+						+input('Ваше имя *')
+						+input('E-mail *','email')
+						+input('Телефон','tel')
+						+input('Сообщение *','textarea')
+			.row
+				.col-md-6
+					+e.row-sm.row
+						.col-lg-auto.text-center.text-md-start
+							+e.BUTTON.btn 
+								span Отправить
+								+icon('arrow-right')
+						.col-lg.order-lg-first
+							+e.policy Нажимая кнопку «Отправить» вы принимаете условия #[a(href="#") Политики конфиденциальности] и&nbsp;#[a(href="#") Обработки персональных данных]
+				+e.col.col-md-6.order-md-first
+					+e.btn-up(href="#header")
+						span
+							+icon('shevron-up')
+						span Вернуться наверх
+
 	// end sForm

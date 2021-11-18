@@ -49,14 +49,23 @@
 	}
 	&__logo {
 		display: inline-block;
-		img {
-			width: rem(60);
-			height: rem(42);
-			@include media-breakpoint-up(xxl) {
-				width: rem(80);
-				height: rem(56);
+		.icon {
+			font-size: rem(56);
+			@include media-breakpoint-between(sm, xxl) {
+				font-size: rem(42);
 			}
+			// @include media-breakpoint-up(xxl) {
+			// 	font-size: rem(56);
+			// }
 		}
+		// img {
+		// 	width: rem(60);
+		// 	height: rem(42);
+		// 	@include media-breakpoint-up(xxl) {
+		// 		width: rem(80);
+		// 		height: rem(56);
+		// 	}
+		// }
 	}
 	&__developer {
 		text-align: center;

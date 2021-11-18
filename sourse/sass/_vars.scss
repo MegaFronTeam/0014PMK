@@ -206,7 +206,8 @@ $position-values: (0: 0,
 //
 // Settings for the `<body>` element.
 
-$body-bg: $white !default;
+$body-bg: #23282d !default;
+// $body-bg: $white !default;
 $body-color: #23282D !default;
 $body-text-align: null !default;
 
@@ -401,7 +402,7 @@ $line-height-sm: 1.25 !default;
 $line-height-lg: 2 !default;
 
 $h1-font-size: rem(60) !default;
-$h2-font-size: rem(80) !default;
+$h2-font-size: rem(50) !default;
 $h3-font-size: rem(60) !default;
 $h4-font-size: rem(40) !default;
 // $h1-font-size: rem(100) !default;
@@ -659,22 +660,23 @@ $input-bg: $body-bg !default;
 $input-disabled-bg: $gray-200 !default;
 $input-disabled-border-color: null !default;
 
-$input-color: $body-color !default;
-$input-border-color: $gray-400 !default;
+$input-color: $white !default;
+$input-border-color: #393D42 !default;
 $input-border-width: $input-btn-border-width !default;
 $input-box-shadow: $box-shadow-inset !default;
 
-$input-border-radius: $border-radius !default;
+$input-border-radius: 0 !default;
 $input-border-radius-sm: $border-radius-sm !default;
 $input-border-radius-lg: $border-radius-lg !default;
 
-$input-focus-bg: $input-bg !default;
+$input-focus-bg: #FCFCFC !default;
 $input-focus-border-color: tint-color($component-active-bg, 50%) !default;
-$input-focus-color: $input-color !default;
+$input-focus-color: $body-color !default;
 $input-focus-width: $input-btn-focus-width !default;
 $input-focus-box-shadow: $input-btn-focus-box-shadow !default;
 
-$input-placeholder-color: $gray-600 !default;
+$input-placeholder-color: $white !default;
+// $input-placeholder-color: $gray-600 !default;
 $input-plaintext-color: $body-color !default;
 
 $input-height-border: $input-border-width * 2 !default;
@@ -1051,8 +1053,8 @@ $pagination-border-radius-lg: $border-radius-lg !default;
 // Placeholders
 
 // scss-docs-start placeholders
-$placeholder-opacity-max: .5 !default;
-$placeholder-opacity-min: .2 !default;
+$placeholder-opacity-max: 1 !default;
+$placeholder-opacity-min: 1 !default;
 // scss-docs-end placeholders
 
 // Cards

@@ -79,8 +79,8 @@
 						<h1>Поволжская Металлоломная Компания</h1>
 						<p>Осуществляем заготовку, хранение, переработку и реализацию лома черных и цветных металлов и являемся крупным предприятием, осуществляющим производственную деятельность в указанной отрасли</p>
 					</div>
-					<div class="headerBlock__btn">Связаться с нами
-					</div>
+					<a class="headerBlock__btn" href="#sForm">Связаться с нами
+					</a>
 				</div>
 			</div>
 			<!-- end headerBlock-->
@@ -137,10 +137,55 @@
 			<!-- start sForm-->
 			<section class="sForm section" id="sForm">
 				<div class="container">
-					<div class="section-title text-center">
-						<h2>sForm</h2>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="section-title">
+								<h2>Связаться с&nbsp;нами</h2>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-wrap">
+								<form>
+									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше имя *"/>
+									</div>
+									<!-- +e.input-wrap-->
+									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="email" type="email" placeholder="E-mail *"/>
+									</div>
+									<!-- +e.input-wrap-->
+									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Телефон"/>
+									</div>
+									<!-- +e.input-wrap-->
+									<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder="Сообщение *"></textarea>
+									</div>
+									<!-- +e.input-wrap-->
+								</form>
+							</div>
+						</div>
 					</div>
-					<div class="row"></div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="sForm__row-sm row">
+								<div class="col-lg-auto text-center text-md-start">
+									<button class="sForm__btn"> <span>Отправить</span>
+										<svg class="icon icon-arrow-right ">
+											<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+										</svg>
+									</button>
+								</div>
+								<div class="col-lg order-lg-first">
+									<div class="sForm__policy">Нажимая кнопку «Отправить» вы принимаете условия <a href="#">Политики конфиденциальности</a> и&nbsp;<a href="#">Обработки персональных данных</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="sForm__col col-md-6 order-md-first">
+							<a class="sForm__btn-up" href="#header"><span>
+									<svg class="icon icon-shevron-up ">
+										<use xlink:href="img/svg/sprite.svg#shevron-up"></use>
+									</svg></span><span>Вернуться наверх</span>
+							</a>
+						</div>
+					</div>
 				</div>
 			</section>
 			<!-- end sForm-->
@@ -148,7 +193,10 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-12 col-md-auto text-center">
-							<a class="footer__logo" href="/"><img src="img/svg/logo.svg" alt=""/>
+							<a class="footer__logo" href="/">
+								<svg class="icon icon-logo ">
+									<use xlink:href="img/svg/sprite.svg#logo"></use>
+								</svg>
 							</a>
 						</div>
 						<div class="col-12 col-md order-md-first text-center text-md-start">

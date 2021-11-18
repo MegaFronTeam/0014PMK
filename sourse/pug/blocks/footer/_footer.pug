@@ -4,7 +4,8 @@ mixin footer()
 			.row
 				.col-12.col-md-auto.text-center
 					+e.logo(href="/")
-						img(src="img/svg/logo.svg", alt="")
+						+icon('logo')
+						//- img(src="img/svg/logo.svg", alt="")
 				.col-12.col-md.order-md-first.text-center.text-md-start
 					+e.copyright © 2021 ООО «Первая Металлоломная Компания»
 					+e.policy(href="#") Политика конфиденцильности
