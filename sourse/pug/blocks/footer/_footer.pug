@@ -2,8 +2,12 @@ mixin footer()
 	+b.FOOTER.footer
 		.container
 			.row
-				.col
-					
-				.col
-				.col
-				.col-auto
+				.col-12.col-md-auto.text-center
+					+e.logo(href="/")
+						img(src="img/svg/logo.svg", alt="")
+				.col-12.col-md.order-md-first.text-center.text-md-start
+					+e.copyright © 2021 ООО «Первая Металлоломная Компания»
+					+e.policy(href="#") Политика конфиденцильности
+				.col-12.col-md
+					+e.developer Разработка сайта – #[a(href="#") Artsman] 
+

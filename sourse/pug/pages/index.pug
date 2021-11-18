@@ -2,31 +2,33 @@ extends layout/main.pug
 
 
 include ../blocks/sContent/_sContent.pug
+include ../blocks/sAreasOfActivity/_sAreasOfActivity.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sAdvantages/_sAdvantages.pug
+include ../blocks/sOurClients/_sOurClients.pug
 include ../blocks/sContact/_sContact.pug
 
 block variables
 	- let  mainPage= 'main-page'
-	- let  bg= null
+	- let  bg= 'main.jpg'
 
 block title
 	- let  title= 'Поволжская Металлоломная Компания в Самаре'
 	title= title
 block pagecontent
-	//- +mob-mnu()
+	+mob-mnu()
 	+header()
-	+top-nav()
-	
-	+topLine()
-	.container
-		.swiper-wrapper
-			.swiper-slide 1
-			.swiper-slide 2
-			.swiper-slide 3
+		+top-nav()
+	//- +topLine()
 	+headerBlock()
-	+sForm()
+	+sAreasOfActivity()
+	+sAbout()
+	+sAdvantages()
+	+sOurClients()
 	+sContact()
+	+sForm()
 	+footer()
-      
+
 
 
 

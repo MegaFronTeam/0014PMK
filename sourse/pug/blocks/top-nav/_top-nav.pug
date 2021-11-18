@@ -15,18 +15,19 @@ mixin mob-mnu()
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
-			+mnu()
+			.container
+				+mnu()
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container
 			.row
-				.col-auto.d-lg-none
+				.col-auto
 					+menu-toggle()
 				.col
-					.menu-mobile.menu-mobile--js
-						+menu-toggle()
-						+mnu()
+					//- .menu-mobile.menu-mobile--js
+					//- 	+menu-toggle()
+					//- 	+mnu()
 					
 	// end top-nav

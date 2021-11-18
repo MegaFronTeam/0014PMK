@@ -5,7 +5,24 @@
 		<title>Поволжская Металлоломная Компания в Самаре</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width,initial-scale=1.0, shrink-to-fit=no"><meta name="format-detection" content="telephone=no">
+		<meta name="viewport" content="width=575,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no">
+		<script>
+			let viewport = document.querySelector("meta[name=viewport]");
+			var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+			if (is_safari) {
+				//- alert(navigator.userAgent);
+				function w() {
+					this.outerWidth > 575 
+						? viewport.content = "width=device-width, initial-scale=1.0,  maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" 
+						:  viewport.content = "width=575,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no" 
+					//- alert(this.outerWidth + ', '+  viewport.content);
+				}
+				 w();
+				window.addEventListener('resize', () => { 
+				 w();
+				}, { passive: true });
+			}
+		</script><meta name="format-detection" content="telephone=no">
 <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
@@ -19,74 +36,94 @@
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body class="main-page">
+	<body class="main-page" data-bg="main.jpg">
 		<div class="main-wrapper">
+			<div class="menu-mobile menu-mobile--js">
+				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+				</div>
+				<div class="menu-mobile__inner">
+					<div class="container">
+						<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Наши работы</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Цены</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Калькулятор</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Акции</a></li>
+							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Заказать</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!--  мобильное меню-->
 			<!-- start header-->
 			<header class="header" id="header">
-			</header>
-			<!-- end header-->
-			<!-- start top-nav-->
-			<div class="top-nav block-with-lazy">
-				<div class="container">
-					<div class="row">
-						<div class="col-auto d-lg-none">
-							<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
-							</div>
-						</div>
-						<div class="col">
-							<div class="menu-mobile menu-mobile--js">
+				<!-- start top-nav-->
+				<div class="top-nav block-with-lazy">
+					<div class="container">
+						<div class="row">
+							<div class="col-auto">
 								<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
 								</div>
-								<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Наши работы</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Цены</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Калькулятор</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Акции</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Заказать</a></li>
-								</ul>
 							</div>
+							<div class="col"></div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<!-- end top-nav-->
-			<!-- start topLine-->
-			<section class="topLine section" id="topLine">
-				<div class="container">
-					<div class="section-title text-center">
-						<h2>topLine</h2>
-					</div>
-					<div class="row"></div>
-				</div>
-			</section>
-			<!-- end topLine-->
-			<div class="container">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide">1</div>
-					<div class="swiper-slide">2</div>
-					<div class="swiper-slide">3</div>
-				</div>
-			</div>
+				<!-- end top-nav-->
+			</header>
+			<!-- end header-->
 			<!-- start headerBlock-->
-			<div class="headerBlock section" id="headerBlock">
+			<div class="headerBlock section" id="headerBlock"><iframe src="https://player.vimeo.com/video/643834756?h=56fa57fa12&autoplay=1&loop=1&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+<script src="https://player.vimeo.com/api/player.js"></script>
 				<div class="container">
 					<div class="section-title text-center">
-						<h2>headerBlock ds dfsdfdsfsd</h2>
+						<h1>Поволжская Металлоломная Компания</h1>
+						<p>Осуществляем заготовку, хранение, переработку и реализацию лома черных и цветных металлов и являемся крупным предприятием, осуществляющим производственную деятельность в указанной отрасли</p>
 					</div>
-					<div class="row"></div>
+					<div class="headerBlock__btn">Связаться с нами
+					</div>
 				</div>
 			</div>
 			<!-- end headerBlock-->
-			<!-- start sForm-->
-			<section class="sForm section" id="sForm">
+			<!-- start sAreasOfActivity-->
+			<section class="sAreasOfActivity section" id="sAreasOfActivity">
 				<div class="container">
 					<div class="section-title text-center">
-						<h2>sForm</h2>
+						<h2>sAreasOfActivity</h2>
 					</div>
 					<div class="row"></div>
 				</div>
 			</section>
-			<!-- end sForm-->
+			<!-- end sAreasOfActivity-->
+			<!-- start sAbout-->
+			<section class="sAbout section" id="sAbout">
+				<div class="container">
+					<div class="section-title text-center">
+						<h2>sAbout</h2>
+					</div>
+					<div class="row"></div>
+				</div>
+			</section>
+			<!-- end sAbout-->
+			<!-- start sAdvantages-->
+			<section class="sAdvantages section" id="sAdvantages">
+				<div class="container">
+					<div class="section-title text-center">
+						<h2>sAdvantages</h2>
+					</div>
+					<div class="row"></div>
+				</div>
+			</section>
+			<!-- end sAdvantages-->
+			<!-- start sOurClients-->
+			<section class="sOurClients section" id="sOurClients">
+				<div class="container">
+					<div class="section-title text-center">
+						<h2>sOurClients</h2>
+					</div>
+					<div class="row"></div>
+				</div>
+			</section>
+			<!-- end sOurClients-->
 			<!-- start sContact-->
 			<section class="sContact section" id="sContact">
 				<div class="container">
@@ -97,18 +134,38 @@
 				</div>
 			</section>
 			<!-- end sContact-->
+			<!-- start sForm-->
+			<section class="sForm section" id="sForm">
+				<div class="container">
+					<div class="section-title text-center">
+						<h2>sForm</h2>
+					</div>
+					<div class="row"></div>
+				</div>
+			</section>
+			<!-- end sForm-->
 			<footer class="footer">
 				<div class="container">
 					<div class="row">
-						<div class="col"></div>
-						<div class="col"></div>
-						<div class="col"></div>
-						<div class="col-auto"></div>
+						<div class="col-12 col-md-auto text-center">
+							<a class="footer__logo" href="/"><img src="img/svg/logo.svg" alt=""/>
+							</a>
+						</div>
+						<div class="col-12 col-md order-md-first text-center text-md-start">
+							<div class="footer__copyright">© 2021 ООО «Первая Металлоломная Компания»
+							</div>
+							<a class="footer__policy" href="#">Политика конфиденцильности
+							</a>
+						</div>
+						<div class="col-12 col-md">
+							<div class="footer__developer">Разработка сайта – <a href="#">Artsman</a> 
+							</div>
+						</div>
 					</div>
 				</div>
 			</footer>
 		</div>
-		<!--  start modals--><a class="link-modal-js" href="modal-call">modal-call </a>
+		<!--  start modals-->
 		<div id="modal-call" style="display: none">
 			<div class="modal-win">
 				<div class="form-wrap">
