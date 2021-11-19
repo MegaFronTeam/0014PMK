@@ -13,6 +13,37 @@
 	@include media-breakpoint-up(xxl) {
 		font-size: rem(16);
 	}
+	picture {
+		opacity: 0.5;
+		@include media-breakpoint-up(lg) {
+			height: 75%;
+		}
+		@include media-breakpoint-up(xl) {
+			height: 70%;
+		}
+		@include media-breakpoint-up(xxl) {
+			height: 75.33%;
+		}
+		img {
+			@include media-breakpoint-up(lg) {
+				object-position: center bottom;
+			}
+			// @include media-breakpoint-up(xl) {
+			// 	object-position: center bottom;
+			// }
+			@include media-breakpoint-up(xxl) {
+				object-position: center 80%;
+			}
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-image: linear-gradient(180deg, rgba(35, 40, 45, 0) 0%, #23282d 100%);
+			z-index: 2;
+		}
+	}
 	.section-title {
 		text-align: center;
 		@include media-breakpoint-up(md) {
@@ -112,7 +143,7 @@
 		position: relative;
 		font-size: inherit;
 		line-height: 125%;
-		color: #8d8f93 !important;
+		color: #8d8f93;
 
 		&:before {
 			content: "";
@@ -122,9 +153,10 @@
 			height: 1px;
 			left: 0;
 			bottom: -1px;
-			border-bottom: 1px dashed currentColor;
+			border-bottom: 1px dashed #8d8f93;
 		}
 		&:hover {
+			color: $white;
 			&:before {
 				opacity: 0;
 			}
@@ -135,10 +167,11 @@
 		height: rem(305);
 		margin-top: rem(60);
 		@include media-breakpoint-up(xl) {
-			margin-top: rem(80);
-			height: rem(480);
+			height: rem(420);
 		}
 		@include media-breakpoint-up(xxl) {
+			margin-top: rem(80);
+			height: rem(480);
 			margin-top: rem(100);
 		}
 		iframe {

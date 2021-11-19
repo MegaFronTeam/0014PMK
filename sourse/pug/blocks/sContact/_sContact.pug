@@ -1,6 +1,14 @@
 mixin sContact()
 	// start sContact
-	+b.SECTION.sContact.section#sContact&attributes(attributes)
+	+b.SECTION.sContact.section.bg-wrap#sContact&attributes(attributes)
+		picture.picture-bg
+			source(type='image/webp' srcset='img/@2x/webp/sContact-bg.webp' media='(min-width:992px)')
+			source(type='image/webp' srcset='img/@2x/webp/sContact-bg-md.webp' media='(min-width:768px)')
+			source(type='image/webp' srcset='img/@2x/webp/sContact-bg-sm.webp')
+			source(type='image/jpg' srcset='img/@2x/sContact-bg.jpg' media='(min-width:992px)')
+			source(type='image/jpg' srcset='img/@2x/sContact-bg-md.jpg' media='(min-width:768px)')
+			source(type='image/jpg' srcset='img/@2x/sContact-bg-sm.jpg')
+			img.object-fit-js(src='img/@2x/sContact-bg-sm.jpg' alt='' loading='lazy')
 		.container
 			+b.section-title
 				h2 Контакты
