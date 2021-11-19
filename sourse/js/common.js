@@ -350,15 +350,43 @@ function eventHandler() {
 		},
 	}
 
-	const swiper4 = new Swiper('.sBanners__slider--js', {
-		// slidesPerView: 5,
-		...defaultSl,
+	const sOurClientsSlider = new Swiper('.sOurClients__slider--js', {
+		// ...defaultSl,
 		slidesPerView: 'auto',
-		freeMode: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
-		slideToClickedSlide: true,
-		freeModeMomentum: true,
+		// freeMode: true,
+		// touchRatio: 0.2,
+		// freeModeMomentum: true,
+		// loop: true,
+		// loopFillGroupWithBlank: true,
+		lazy: {
+			loadPrevNext: true,
+		},
+		watchOverflow: true,
+		spaceBetween: 20,
+		navigation: {
+			nextEl: '.sOurClients .section-title__arrows .swiper-button-next',
+			prevEl: '.sOurClients .section-title__arrows .swiper-button-prev',
+		},
+		// slideToClickedSlide: true,
+		breakpoints: {
+			576: {
+				slidesPerView: 'auto',
+				spaceBetween: 24
+			},
+			768: {
+				slidesPerView: 4,
+				spaceBetween: 24
+			},
+			992: {
+				slidesPerView: 4,
+				spaceBetween: 30
+			},
+			1400: {
+				slidesPerView: 4,
+				spaceBetween: 40
+			},
+			// when window width is >= 640px
+		}
 
 	});
 	// modal window

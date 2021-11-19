@@ -1,14 +1,82 @@
 // start .sOurClients
 .sOurClients {
-		// --sPT: ;
-		// --sPB: ;
-		// --sTPB: ;
+	// --sPT: ;
+	// --sPB: ;
+	color: $white;
+	--swiperArrowSize: #{rem(40)};
+	@include media-breakpoint-down(lg) {
+		--sTPB: #{rem(60)};
+	}
+	@include media-breakpoint-down(sm) {
+		--sTPB: #{rem(60)};
+	}
+	@include media-breakpoint-up(xxl) {
+		--swiperArrowSize: #{rem(50)};
+	}
+	// --swiperArrowPosition: calc(-1 * var(--swiperArrowSize) / 2);
+	--swiperBorderColorDef: #393d42;
+	--swiperColorDef: #ffffff;
+	--swiperBgDef: #393d42;
 
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
+	--swiperBorderColorDefHover: var(--bs-primary);
+	--swiperColorDefHover: #ffffff;
+	--swiperBgDefHover: var(--bs-primary);
+	.container {
+		position: relative;
+	}
+
+	.section-title {
+		h2 {
+			text-align: center;
+			@include media-breakpoint-up(md) {
+				text-align: left;
+			}
+		}
+		&__arrows {
+			@include roww(10px, m);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			.swiper-button-hand {
+				position: relative;
+				left: 0;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				cursor: pointer;
+			}
+		}
+	}
+	&__slider {
+		@include media-breakpoint-down(md) {
+			overflow: visible;
+		}
+	}
+	&__slide {
+		max-width: rem(400);
+	}
+	&__item {
+		@include block;
+		background-color: #fcfcfc;
+		border-radius: 15px;
+		img {
+			@include a-cent;
+			width: 60%;
+			height: auto;
+		}
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
 } // end.sOurClients

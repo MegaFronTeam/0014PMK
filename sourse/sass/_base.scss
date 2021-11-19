@@ -297,6 +297,7 @@ ul {
 	box-shadow: 0 15px 60px rgba(0, 0, 0, 0.1);
 	@include mt;
 	user-select: none;
+	cursor: pointer;
 
 	&:hover {
 		background-color: var(--swiperBgDefHover);
@@ -305,7 +306,11 @@ ul {
 	}
 
 	.icon {
-		font-size: rem(12);
+		@include a-cent;
+		font-size: rem(14);
+		@include media-breakpoint-up(xxl) {
+			font-size: rem(16);
+		}
 	}
 
 	&::after {
@@ -456,7 +461,7 @@ iframe {
 }
 
 .swiper-wrapper {
-	@include row-sw(10px, sm, 100px);
+	// @include row-sw(10px, sm, 100px);
 }
 
 .btn-primary {

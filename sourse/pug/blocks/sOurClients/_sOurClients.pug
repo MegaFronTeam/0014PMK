@@ -2,8 +2,32 @@ mixin sOurClients(data)
 	// start sOurClients
 	+b.SECTION.sOurClients.section#sOurClients&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sOurClients
-				
-			.row
-	// end sOurClients
+			+b.section-title
+				.row.align-items-center
+					.col
+						h2 Наши клиенты
+					.col-auto.d-none.d-md-block
+						+e.arrows
+							+arrow
+			+e.slider--js.swiper
+				.swiper-wrapper
+					+e.slide.swiper-slide
+						+e.item
+							img(src="img/svg/sOurClients-1.svg", alt="")
+					+e.slide.swiper-slide
+						+e.item
+							img(src="img/svg/sOurClients-2.svg", alt="")
+					+e.slide.swiper-slide
+						+e.item
+							img(src="img/svg/sOurClients-3.svg", alt="")
+					+e.slide.swiper-slide
+						+e.item
+							img(src="img/svg/sOurClients-4.svg", alt="")
+					+e.slide.swiper-slide
+						+e.item
+							img(src="img/svg/sOurClients-1.svg", alt="")
+					+e.slide.swiper-slide
+						+e.item
+							img(src="img/svg/sOurClients-2.svg", alt="")
+					
+
