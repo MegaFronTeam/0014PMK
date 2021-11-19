@@ -2,8 +2,22 @@ mixin sContact()
 	// start sContact
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sContact
-				
-			.row
+			+b.section-title
+				h2 Контакты
+			.row.align-items-center
+				.col-lg-auto
+					+e.tel-lg(href="tel:+78463720959")
+						span
+							+icon('phone-call')
+						span +7 (846) 372-09-59
+				.col-12.col-md-auto
+					+e.tel(href="tel:+78463720959") +7 (846) 372-09-59
+				.col-12.col-md-auto
+					DIV Самара, ул. Земеца, д. 32
+				.col-12.col-md-auto
+					+e.email(href="mailto:info@pmksite.ru") info@pmksite.ru
+		.container
+			+e.map
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2389.5082316499625!2d50.29937541597274!3d53.20873519271066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41661ba54e4bcfb9%3A0xa5dd8faa5397c91e!2z0YPQuy4g0JfQtdC80LXRhtCwLCAzMiwg0KHQsNC80LDRgNCwLCDQodCw0LzQsNGA0YHQutCw0Y8g0L7QsdC7Liwg0KDQvtGB0YHQuNGPLCA0NDMwNTI!5e0!3m2!1sru!2sby!4v1637326859534!5m2!1sru!2sby"  style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
 	// end sContact

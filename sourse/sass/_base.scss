@@ -478,4 +478,20 @@ iframe {
 	}
 }
 
-
+@include media-breakpoint-up(xxl) {
+	h1 {
+		font-size: rem(100);
+	}
+	h2 {
+		font-size: rem(80);
+	}
+	h3 {
+		font-size: rem(60);
+	}
+	h4 {
+		font-size: rem(40);
+	}
+	h5 {
+		font-size: rem(30);
+	}
+}

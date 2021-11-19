@@ -6,13 +6,13 @@
 	--sPB: #{rem(80)};
 	--sTPB: #{rem(30)};
 	@include media-breakpoint-up(sm) {
-		--sPT: #{rem(120)};
-		--sPB: #{rem(120)};
+		// --sPT: #{rem(120)};
+		// --sPB: #{rem(120)};
 		--sTPB: #{rem(60)};
 	}
 	@include media-breakpoint-up(md) {
-		// --sPT: #{rem(120)};
-		// --sPB: #{rem(120)};
+		--sPT: #{rem(120)};
+		--sPB: #{rem(120)};
 		--sTPB: #{rem(80)};
 	}
 	@include media-breakpoint-up(xxl) {
