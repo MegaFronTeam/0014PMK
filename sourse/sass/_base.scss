@@ -328,16 +328,19 @@ ul {
 .swiper-pagination {
 	width: 100%;
 	text-align: center;
+	display: flex;
+	justify-content: center;
+	margin-top: rem(30);
 
 	&-bullet {
 		opacity: 1;
-		width: 8px;
-		height: 8px;
+		width: 10px;
+		height: 10px;
 		border-radius: 50%;
-		background-color: #e6e6e6;
+		background-color: #39423C;
 		outline: none !important;
 		@include mt;
-		margin-left: rem(8);
+		margin-left: rem(5);
 		// padding-right: rem(8);
 		margin-right: rem(5);
 		display: inline-block;

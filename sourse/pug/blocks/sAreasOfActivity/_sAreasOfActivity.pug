@@ -6,28 +6,22 @@ mixin sAreasOfActivity(data)
 				h2 Сферы деятельности организации
 			+e.slider--js.swiper
 				.swiper-wrapper
-					+e.slide.swiper-slide
-						+e.item.bg-wrap(href="#")
-							+pic('sAreasOfActivity-1.jpg', 'bg', 0).picture-bg
-					+e.slide.swiper-slide
-						+e.item.bg-wrap(href="#")
-							+pic('sAreasOfActivity-2.jpg', 'bg', 0).picture-bg
-					+e.slide.swiper-slide
-						+e.item.bg-wrap(href="#")
-							+pic('sAreasOfActivity-3.jpg', 'bg', 0).picture-bg
-					+e.slide.swiper-slide
-						+e.item.bg-wrap(href="#")
-							+pic('sAreasOfActivity-1.jpg', 'bg', 0).picture-bg
-					+e.slide.swiper-slide
-						+e.item.bg-wrap(href="#")
-							+pic('sAreasOfActivity-2.jpg', 'bg', 0).picture-bg
-					+e.slide.swiper-slide
-						+e.item.bg-wrap(href="#")
-							+pic('sAreasOfActivity-3.jpg', 'bg', 0).picture-bg
-					+e.slide.swiper-slide
-						+e.item.bg-wrap(href="#")
-							+pic('sAreasOfActivity-1.jpg', 'bg', 0).picture-bg
-					
-				.swiper-pagination
+					mixin item(i, t)
+						+e.slide.swiper-slide
+							+e.item.bg-wrap(href="#")
+								+pic(`sAreasOfActivity-${i}.jpg`, 'bg', 0).picture-bg
+								+e.content
+									h4!= t
+									+e.btn-wrap
+										+e.btn-more
+											span Подробнее
+											+icon('arrow-right')
+					+item(1, `Заготовка, переработка и реализация лома черных и цветных металлов`)
+					+item(2, `Демонтаж всех видов трубопроводов`)
+					+item(3, `Демонтаж промышленных <br> объектов`)
+					+item(2, `Демонтаж всех видов трубопроводов`)
+					+item(1, `Заготовка, переработка и реализация лома черных и цветных металлов`)
+					+item(3, `Демонтаж промышленных <br> объектов`)
 				+arrow
+			.swiper-pagination
 	// end sAreasOfActivity

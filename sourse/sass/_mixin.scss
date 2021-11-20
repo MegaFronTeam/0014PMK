@@ -255,7 +255,7 @@
       display: none!important;
     }
     & > .swiper-slide{
-      @include col-sw(); 
+      @include col-sw();
     }
   }
   & > .swiper-slide{

@@ -385,32 +385,29 @@ function eventHandler() {
 				slidesPerView: 4,
 				spaceBetween: 40
 			},
-			// when window width is >= 640px
 		}
 	});
 	const sAreasOfActivitySlider = new Swiper('.sAreasOfActivity__slider--js', {
-		// ...defaultSl,
-		slidesPerView: 1,
-		// freeMode: true,
-		// touchRatio: 0.2,
-		// freeModeMomentum: true,
-		// loop: true,
-		// loopFillGroupWithBlank: true,
+		slidesPerView: 'auto',
 		lazy: {
 			loadPrevNext: true,
 		},
 		watchOverflow: true,
-		spaceBetween: 30,
+		spaceBetween: 0,
 		navigation: {
 			nextEl: '.sAreasOfActivity__slider .swiper-button-next',
 			prevEl: '.sAreasOfActivity__slider .swiper-button-prev',
 		},
-		// slideToClickedSlide: true,
+		pagination: {
+			el: ' .sAreasOfActivity .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
 		breakpoints: {
-			// 576: {
-			// 	spaceBetween: 30,
-			// 	slidesPerView: 'auto'
-			// },
+			576: {
+				spaceBetween: 30,
+				slidesPerView: 1
+			},
 			// 768: {
 			// 	spaceBetween: 20,
 			// 	slidesPerView: 'auto'

@@ -11,23 +11,15 @@ mixin sOurClients(data)
 							+arrow
 			+e.slider--js.swiper
 				.swiper-wrapper
-					+e.slide.swiper-slide
-						+e.item
-							img(src="img/svg/sOurClients-1.svg", alt="")
-					+e.slide.swiper-slide
-						+e.item
-							img(src="img/svg/sOurClients-2.svg", alt="")
-					+e.slide.swiper-slide
-						+e.item
-							img(src="img/svg/sOurClients-3.svg", alt="")
-					+e.slide.swiper-slide
-						+e.item
-							img(src="img/svg/sOurClients-4.svg", alt="")
-					+e.slide.swiper-slide
-						+e.item
-							img(src="img/svg/sOurClients-1.svg", alt="")
-					+e.slide.swiper-slide
-						+e.item
-							img(src="img/svg/sOurClients-2.svg", alt="")
+					mixin slide(i)
+						+e.slide.swiper-slide
+							+e.item
+								+pic(`sOurClients-${i}.png`, '', 0)
+					+slide(1)
+					+slide(2)
+					+slide(3)
+					+slide(4)
+					+slide(1)
+					+slide(2)
 					
 

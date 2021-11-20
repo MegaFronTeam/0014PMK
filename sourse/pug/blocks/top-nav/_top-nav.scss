@@ -1,6 +1,7 @@
 .top-nav {
 	// background: svg-load('../svg/check.svg',  stroke=$primary);
 	//
+	@include mt;
 	background-color: transparent;
 	padding-top: rem(40);
 	@include media-breakpoint-up(xl) {

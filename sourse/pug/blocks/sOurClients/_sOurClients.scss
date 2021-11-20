@@ -61,8 +61,8 @@
 		border-radius: 15px;
 		img {
 			@include a-cent;
-			width: 60%;
-			height: auto;
+			max-width: 70%;
+			max-height: 70%;
 		}
 	}
 	@include media-breakpoint-up(xl) {
