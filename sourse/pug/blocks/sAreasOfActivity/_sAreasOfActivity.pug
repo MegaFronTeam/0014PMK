@@ -3,7 +3,31 @@ mixin sAreasOfActivity(data)
 	+b.SECTION.sAreasOfActivity.section#sAreasOfActivity&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 sAreasOfActivity
-				
-			.row
+				h2 Сферы деятельности организации
+			+e.slider--js.swiper
+				.swiper-wrapper
+					+e.slide.swiper-slide
+						+e.item.bg-wrap(href="#")
+							+pic('sAreasOfActivity-1.jpg', 'bg', 0).picture-bg
+					+e.slide.swiper-slide
+						+e.item.bg-wrap(href="#")
+							+pic('sAreasOfActivity-2.jpg', 'bg', 0).picture-bg
+					+e.slide.swiper-slide
+						+e.item.bg-wrap(href="#")
+							+pic('sAreasOfActivity-3.jpg', 'bg', 0).picture-bg
+					+e.slide.swiper-slide
+						+e.item.bg-wrap(href="#")
+							+pic('sAreasOfActivity-1.jpg', 'bg', 0).picture-bg
+					+e.slide.swiper-slide
+						+e.item.bg-wrap(href="#")
+							+pic('sAreasOfActivity-2.jpg', 'bg', 0).picture-bg
+					+e.slide.swiper-slide
+						+e.item.bg-wrap(href="#")
+							+pic('sAreasOfActivity-3.jpg', 'bg', 0).picture-bg
+					+e.slide.swiper-slide
+						+e.item.bg-wrap(href="#")
+							+pic('sAreasOfActivity-1.jpg', 'bg', 0).picture-bg
+					
+				.swiper-pagination
+				+arrow
 	// end sAreasOfActivity

@@ -70,6 +70,18 @@
 		position: relative;
 		z-index: 3;
 	}
+	&__btn-down {
+		@include a-cent(x);
+		bottom: 2px;
+		z-index: 2;
+		width: 40px;
+		&:not(:hover) {
+			color: $white;
+		}
+		.icon {
+			font-size: rem(30);
+		}
+	}
 
 	// h2 {
 	// 	margin-bottom: 1px;

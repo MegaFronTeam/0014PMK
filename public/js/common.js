@@ -387,7 +387,44 @@ function eventHandler() {
 			},
 			// when window width is >= 640px
 		}
-
+	});
+	const sAreasOfActivitySlider = new Swiper('.sAreasOfActivity__slider--js', {
+		// ...defaultSl,
+		slidesPerView: 1,
+		// freeMode: true,
+		// touchRatio: 0.2,
+		// freeModeMomentum: true,
+		// loop: true,
+		// loopFillGroupWithBlank: true,
+		lazy: {
+			loadPrevNext: true,
+		},
+		watchOverflow: true,
+		spaceBetween: 30,
+		navigation: {
+			nextEl: '.sAreasOfActivity__slider .swiper-button-next',
+			prevEl: '.sAreasOfActivity__slider .swiper-button-prev',
+		},
+		// slideToClickedSlide: true,
+		breakpoints: {
+			// 576: {
+			// 	spaceBetween: 30,
+			// 	slidesPerView: 'auto'
+			// },
+			// 768: {
+			// 	spaceBetween: 20,
+			// 	slidesPerView: 'auto'
+			// },
+			992: {
+				spaceBetween: 30,
+				slidesPerView: 3
+			},
+			1400: {
+				spaceBetween: 0,
+				slidesPerView: 2
+			},
+			// when window width is >= 640px
+		}
 	});
 	// modal window
 
