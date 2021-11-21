@@ -337,7 +337,7 @@ ul {
 		width: 10px;
 		height: 10px;
 		border-radius: 50%;
-		background-color: #39423C;
+		background-color: #39423c;
 		outline: none !important;
 		@include mt;
 		margin-left: rem(5);
@@ -483,6 +483,15 @@ iframe {
 	}
 	@include media-breakpoint-up(xxl) {
 		--bs-gutter-x: #{rem(40)};
+	}
+}
+
+@include media-breakpoint-down(sm) {
+	h1 {
+		font-size: rem(60);
+	}
+	h2 {
+		font-size: rem(50);
 	}
 }
 

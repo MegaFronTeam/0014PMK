@@ -423,6 +423,42 @@ function eventHandler() {
 			// when window width is >= 640px
 		}
 	});
+	const sAdvantagesSlider = new Swiper('.sAdvantages__slider--js', {
+		slidesPerView: 'auto',
+		lazy: {
+			loadPrevNext: true,
+		},
+		watchOverflow: true,
+		spaceBetween: 24,
+		// navigation: {
+		// 	nextEl: '.sAreasOfActivity__slider .swiper-button-next',
+		// 	prevEl: '.sAreasOfActivity__slider .swiper-button-prev',
+		// },
+		pagination: {
+			el: ' .sAdvantages .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		}
+		// breakpoints: {
+		// 	576: {
+		// 		spaceBetween: 30,
+		// 		slidesPerView: 1
+		// 	},
+		// 	// 768: {
+		// 	// 	spaceBetween: 20,
+		// 	// 	slidesPerView: 'auto'
+		// 	// },
+		// 	992: {
+		// 		spaceBetween: 30,
+		// 		slidesPerView: 3
+		// 	},
+		// 	1400: {
+		// 		spaceBetween: 0,
+		// 		slidesPerView: 2
+		// 	},
+		// 	// when window width is >= 640px
+		// }
+	});
 	// modal window
 
 };

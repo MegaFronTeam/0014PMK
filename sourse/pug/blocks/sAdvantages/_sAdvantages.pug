@@ -2,8 +2,27 @@ mixin sAdvantages(data)
 	// start sAdvantages
 	+b.SECTION.sAdvantages.section#sAdvantages&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sAdvantages
-				
-			.row
+			+b.section-title
+				h2 Более 22 лет в сфере металлолома
+				p Среднесписочная численность работников компаний составляет 90 человек, что позволяет, в соответствии с требованиями Федерального закона от 24.07.2007  209-ФЗ «О развитии малого и среднего предпринимательства в Российской Федерации», отнести предприятие к сегменту «Среднее».
+
+			+e.slider--js.swiper
+				.swiper-wrapper
+					+e.slide.swiper-slide
+						+e.item
+							h3 01
+							p Многопрофильность деятельности
+					+e.slide.swiper-slide
+						+e.item
+							h3 02
+							p Наличие квалификации для выполнения особо сложных работ
+					+e.slide.swiper-slide
+						+e.item
+							h3 03
+							p Возможность работать в любом регионе страны
+					+e.slide.swiper-slide
+						+e.item
+							h3 04
+							p Хорошая репутация и огромная клиентская база
+			.swiper-pagination
 	// end sAdvantages

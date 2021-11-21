@@ -1,14 +1,155 @@
 // start .sAdvantages
 .sAdvantages {
-		// --sPT: ;
-		// --sPB: ;
-		// --sTPB: ;
+	// --sPT: ;
+	// --sPB: ;
+	--sTPB: #{rem(60)};
+	@include media-breakpoint-up(lg) {
+		--sTPB: #{rem(80)};
+	}
+	@include media-breakpoint-up(xxl) {
+		--sTPB: #{rem(100)};
+	}
+	color: $white;
+	.section-title {
+		text-align: center;
+		@include media-breakpoint-up(lg) {
+			text-align: left;
+		}
+		h2 {
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 11em;
+			margin-bottom: rem(30);
+			@include media-breakpoint-up(lg) {
+				margin-left: 0;
+				margin-right: 0;
+			}
+			@include media-breakpoint-down(sm) {
+				font-size: rem(50);
+			}
+		}
+		p {
+			font-size: rem(24);
+			line-height: 150%;
+			color: #ffffff;
+			opacity: 0.7;
+			@include media-breakpoint-up(sm) {
+				font-size: rem(16);
+			}
+			@include media-breakpoint-up(lg) {
+				max-width: rem(690);
+			}
+			@include media-breakpoint-up(xxl) {
+				font-size: rem(18);
+				max-width: rem(790);
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
 
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
+	.swiper-pagination {
+		@include media-breakpoint-up(md) {
+			display: none;
+		}
+	}
+	&__slider {
+		.swiper-wrapper {
+			@include row-sw(24px, md, 40px);
+			@include media-breakpoint-up(sm) {
+				--bs-gutter-x: #{rem(24)};
+			}
+			@include media-breakpoint-up(lg) {
+				--bs-gutter-x: #{rem(30)};
+			}
+			@include media-breakpoint-up(xxl) {
+				--bs-gutter-x: #{rem(40)};
+			}
+		}
+	}
+	.container {
+		.sAdvantages__slider {
+			.swiper-wrapper {
+				.sAdvantages__slide {
+					@extend .col-md-6, .col-lg-3;
+				}
+			}
+		}
+	}
+	&__slide {
+		@include media-breakpoint-down(md) {
+			background-color: $white;
+			border-radius: 15px;
+			padding: rem(40);
+		}
+	}
+	&__item {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		@include media-breakpoint-down(md) {
+			text-align: center;
+		}
+		h3 {
+			position: relative;
+			line-height: 100%;
+			font-size: rem(60);
+			padding-bottom: rem(30);
+			margin-bottom: rem(30);
+			color: #8d8f93;
+			@include media-breakpoint-between(md, xxl) {
+				font-size: rem(40);
+				padding-bottom: rem(20);
+				margin-bottom: rem(20);
+			}
+			@include media-breakpoint-down(md) {
+				color: $primary;
+			}
+			&::before {
+				content: "";
+				position: absolute;
+				width: 100%;
+				height: 1px;
+				left: 0;
+				bottom: 0;
+				background-color: #8d8f93;
+				@include media-breakpoint-down(md) {
+					@include a-cent(x);
+					max-width: 78%;
+					background-color: $primary;
+				}
+			}
+		}
+		p {
+			flex-grow: 1;
+			font-size: rem(30);
+			font-weight: normal;
+			color: #24292e;
+			@include media-breakpoint-between(md, xxl) {
+				font-size: rem(20);
+			}
+			@include media-breakpoint-up(md) {
+				font-weight: bold;
+				color: #8d8f93;
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
 } // end.sAdvantages
