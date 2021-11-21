@@ -174,12 +174,15 @@
 			height: rem(480);
 			margin-top: rem(100);
 		}
-		iframe {
+		&-widget {
 			height: 100%;
 			width: 100%;
 			@include media-breakpoint-up(md) {
 				width: calc(((100vw - 100%) / 2) + 100%);
 			}
+			// & > * {
+			// 	height: 100%;
+			// }
 		}
 	}
 	@include media-breakpoint-up(xl) {
