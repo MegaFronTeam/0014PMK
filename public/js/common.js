@@ -493,8 +493,8 @@ if (document.querySelector("#map")) {
 				// ),
 	
 				myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-						hintContent: 'Собственный значок метки',
-						balloonContent: 'Это красивая метка'
+						hintContent: 'Поволжская Металлоломная Компания',
+						balloonContent: 'г. Самара, ул. Земеца, д. 32'
 				}, {
 						// Опции.
 						// Необходимо указать данный тип макета.
