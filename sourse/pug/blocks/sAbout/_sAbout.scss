@@ -2,17 +2,21 @@
 .sAbout {
 	// --sPT: ;
 	// --sPB: ;
+	background-color: #fcfcfc;
 	--sTPB: #{rem(37)};
 	@include media-breakpoint-up(sm) {
 		--sTPB: #{rem(60)};
 	}
 	@include media-breakpoint-up(lg) {
+		--sTPB: #{rem(90)};
+	}
+	@include media-breakpoint-up(xl) {
 		--sTPB: #{rem(117)};
 	}
 	@include media-breakpoint-up(xxl) {
 		--sTPB: #{rem(200)};
 	}
-	background-color: #fcfcfc;
+	
 	.container {
 		@include media-breakpoint-up(lg) {
 			position: relative;
@@ -101,15 +105,12 @@
 	&__img-wrap-lg {
 		img {
 			position: absolute;
-			top: 6.1%;
+			top: 10.3%;
 			right: 0;
 			max-width: 90%;
 			height: auto;
 			z-index: 3;
 			right: 0;
-			@include media-breakpoint-up(xl) {
-				top: 10.3%;
-			}
 			@include media-breakpoint-up(xxl) {
 				top: 6.2%;
 			}
@@ -118,13 +119,22 @@
 			}
 		}
 	}
+	&__presence {
+		position: relative;
+		z-index: 4;
+	}
 	&__head-office {
 		display: inline-flex;
 		flex-direction: column;
+		z-index: 3;
 		@include media-breakpoint-down(md) {
 			@include a-cent1;
 			align-items: center;
-			z-index: 2;
+		}
+		@include media-breakpoint-up(md) {
+			position: absolute;
+			left: rem(12);
+			top: 50%;
 		}
 		span {
 			font-size: rem(20);
@@ -167,6 +177,9 @@
 		}
 		li {
 			margin-bottom: rem(10);
+			@include media-breakpoint-only(lg) {
+				margin-bottom: rem(4);
+			}
 			&:last-child {
 				margin-bottom: 0;
 			}
