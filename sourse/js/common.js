@@ -481,7 +481,7 @@ if (document.querySelector("#map")) {
 
 	ymaps.ready(function () {
 		var myMap = new ymaps.Map('map', {
-						center: [53.212889, 50.299305],
+						center: [53.21288957121954,50.299305000000004],
 						zoom: 13,
 						controls: ['zoomControl']
 				}, {

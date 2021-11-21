@@ -242,7 +242,9 @@
 						</div>
 					</div>
 					<div class="sAbout__map">
-						<div class="sAbout__img-wrap"><img src="img/svg/map-sm.svg" alt=""/>
+						<div class="sAbout__img-wrap-sm"><img src="img/svg/map-sm.svg" alt=""/>
+						</div>
+						<div class="sAbout__img-wrap-lg"><img src="img/svg/map-lg.svg" alt=""/>
 						</div>
 						<!-- picture-->
 						<picture class="bg-wrap"> 
@@ -255,11 +257,10 @@
 						<div class="sAbout__head-office"><span>Самара</span><span>Головной офис</span>
 						</div>
 					</div>
-					<div class="sAbout__presence">
-						<h6>География присутствия</h6>
-						<div class="row">
-							<div class="col-lg-6">
-								<ul>
+					<div class="row align-items-end">
+						<div class="col-lg-6">
+							<h6>География присутствия</h6>
+							<ul>
 												<li><span>Самарский грузовой речной порт</span></li>
 												<li><span>Отрадный</span></li>
 												<li><span>Кинель-Черкассы</span></li>
@@ -274,8 +275,17 @@
 												<li><span>Краснодарский край</span></li>
 												<li><span>Ямало-Ненецкий АО</span></li>
 												<li><span>Ханты-Мансийский АО</span></li>
-								</ul>
-							</div>
+							</ul>
+						</div>
+						<div class="col-lg-6 d-none d-lg-block">
+							<!-- picture-->
+							<picture class="bg-wrap"> 
+								<source type="image/webp" srcset="img/@2x/webp/sAbout-md.webp" media="(min-width:576px)"/>
+								<source type="image/webp" srcset="img/@1x/webp/sAbout-md.webp"/>
+								<source type="image/jpg" srcset="img/@2x/sAbout-md.jpg" media="(min-width:576px)"/>
+								<source type="image/jpg" srcset="img/@1x/sAbout-md.jpg"/><img class="object-fit-js" src="img/@2x/sAbout-md.jpg" alt="" loading="lazy"/>
+							</picture>
+							<!-- /picture-->
 						</div>
 					</div>
 				</div>
