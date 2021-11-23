@@ -1,22 +1,26 @@
 mixin sForm()
 	// start sForm
 	+b.SECTION.sForm.section#sForm&attributes(attributes)
-		.container
+		form.container
+			input(class='utm_source' name='utm_source' type="hidden")
+			input(class='utm_term' name='utm_term' type="hidden")
+			input(class='utm_medium' name='utm_medium' type="hidden")
+			input(class='utm_campaign' name='utm_campaign' type="hidden")
 			.row
 				.col-md-6
 					+b.section-title
 						h2 Связаться с&nbsp;нами
 				.col-md-6
-					+form-wrap
-						+input('Ваше имя *')(required)
+					+b.form-wrap
+						+input('Ваше имя *', 'text', 'name')(required)
 						+input('E-mail *','email')(required)
-						+input('Телефон','tel')
-						+input('Сообщение *','textarea')(required)
+						+input('Телефон *','tel')(required)
+						+input('Сообщение','textarea')
 			.row
 				.col-md-6
 					+e.row-sm.row
 						.col-lg-auto.text-center.text-md-start
-							+e.BUTTON.btn
+							+e.BUTTON.btn(type='submit')
 								span Отправить
 								+icon('arrow-right')
 						.col-lg.order-lg-first

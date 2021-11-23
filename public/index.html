@@ -712,7 +712,11 @@
 			<!-- end sContact-->
 			<!-- start sForm-->
 			<section class="sForm section" id="sForm">
-				<div class="container">
+				<form class="container">
+					<input class="utm_source" name="utm_source" type="hidden"/>
+					<input class="utm_term" name="utm_term" type="hidden"/>
+					<input class="utm_medium" name="utm_medium" type="hidden"/>
+					<input class="utm_campaign" name="utm_campaign" type="hidden"/>
 					<div class="row">
 						<div class="col-md-6">
 							<div class="section-title">
@@ -721,20 +725,18 @@
 						</div>
 						<div class="col-md-6">
 							<div class="form-wrap">
-								<form>
-									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше имя *" required="required"/>
-									</div>
-									<!-- +e.input-wrap-->
-									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="email" type="email" placeholder="E-mail *" required="required"/>
-									</div>
-									<!-- +e.input-wrap-->
-									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Телефон"/>
-									</div>
-									<!-- +e.input-wrap-->
-									<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder="Сообщение *"></textarea>
-									</div>
-									<!-- +e.input-wrap-->
-								</form>
+								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="name" type="text" placeholder="Ваше имя *" required="required"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="email" type="email" placeholder="E-mail *" required="required"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Телефон *" required="required"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder="Сообщение"></textarea>
+								</div>
+								<!-- +e.input-wrap-->
 							</div>
 						</div>
 					</div>
@@ -742,7 +744,7 @@
 						<div class="col-md-6">
 							<div class="sForm__row-sm row">
 								<div class="col-lg-auto text-center text-md-start">
-									<button class="sForm__btn"><span>Отправить</span>
+									<button class="sForm__btn" type="submit"><span>Отправить</span>
 										<svg class="icon icon-arrow-right ">
 											<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
 										</svg>
@@ -762,7 +764,7 @@
 							</a>
 						</div>
 					</div>
-				</div>
+				</form>
 			</section>
 			<!-- end sForm-->
 			<footer class="footer" id="footer">
@@ -789,25 +791,20 @@
 				</div>
 			</footer>
 		</div>
-		<!--  start modals--><a class="link-modal-js" href="modal-call">modal-call </a>
-		<div id="modal-call" style="display: none">
-			<div class="modal-win">
+		<!--  start modals-->
+		<div id="modal-thanks" style="display: none">
+			<div class="modal-win modal-win--thanks">
 				<div class="container">
-					<div class="section-title">
-						<div class="row">
-							<div class="col-lg-6">
-								<h2>О компании</h2>
-							</div>
-							<div class="col-lg-6">
-								<p>Компания имеет кадровое ядро, представленное высококвалифицированными управленцами и&nbsp;исполнителями с&nbsp;опытом работы более 20&nbsp;лет.</p>
-								<p>Материально технические ресурсы предприятия позволяют выполнять демонтажные работы любого объема и&nbsp;сложности во&nbsp;всех регионах&nbsp;РФ.</p>
-							</div>
-						</div>
+					<div class="section-title text-center">
+						<h2>Спасибо за обращение!</h2>
+						<p>Мы свяжемся с Вами в течение дня для уточнения деталей вопроса.</p>
+						<button class="section-title__btn modal-close-js">Закрыть
+						</button>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- #modal-call-->
+		<!-- #modal-thanks-->
 		<!-- end modals-->
 		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"> </script>
