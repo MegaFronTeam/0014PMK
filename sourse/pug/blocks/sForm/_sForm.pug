@@ -8,15 +8,15 @@ mixin sForm()
 						h2 Связаться с&nbsp;нами
 				.col-md-6
 					+form-wrap
-						+input('Ваше имя *')
-						+input('E-mail *','email')
+						+input('Ваше имя *')(required)
+						+input('E-mail *','email')(required)
 						+input('Телефон','tel')
-						+input('Сообщение *','textarea')
+						+input('Сообщение *','textarea')(required)
 			.row
 				.col-md-6
 					+e.row-sm.row
 						.col-lg-auto.text-center.text-md-start
-							+e.BUTTON.btn 
+							+e.BUTTON.btn
 								span Отправить
 								+icon('arrow-right')
 						.col-lg.order-lg-first

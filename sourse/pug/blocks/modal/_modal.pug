@@ -1,17 +1,28 @@
 
 mixin modal() 
 	//  start modals
-	//- a(href="modal-call").link-modal-js modal-call 
-	div(id="modal-call"  style="display: none" )
+	a(href="modal-call").link-modal-js modal-call 
+	div(id="modal-call" style="display: none")
 		+b.modal-win
-			+form-wrap
-				.text-center
-					+e.title.form-data.h3.ttu Обратный звонок
-					p.after-headline Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут
+			.container
+				+b.section-title
+					.row
+						.col-lg-6
+								h2 О компании
+						.col-lg-6
+							p Компания имеет кадровое ядро, представленное высококвалифицированными управленцами и&nbsp;исполнителями с&nbsp;опытом работы более 20&nbsp;лет.
+							p Материально технические ресурсы предприятия позволяют выполнять демонтажные работы любого объема и&nbsp;сложности во&nbsp;всех регионах&nbsp;РФ.
 
-				+input("Ваше Имя")(required)  
-				+e.BUTTON.btn.btn(type="submit"  )  
-				+policy()
+
+	
+			//- +form-wrap
+			//- 	.text-center
+			//- 		+e.title.form-data.h3.ttu Обратный звонок
+			//- 		p.after-headline Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут
+
+			//- 	+input("Ваше Имя")(required)  
+			//- 	+e.BUTTON.btn.btn(type="submit"  )
+			//- 	+policy()
 	// #modal-call
 	
 	// end modals
