@@ -1,6 +1,7 @@
 mixin menu-toggle()
 	+b.toggle-menu-mobile--js
 		span
+		+e.title Меню
 mixin mob-mnu()
 	-
 		//- let path = require('path');
@@ -14,6 +15,7 @@ mixin mob-mnu()
 	+b.menu-mobile--js
 		+b.toggle-menu-mobile--js
 			span
+			+e.title Закрыть
 		+e.inner
 			.container
 				+mnu()
@@ -23,11 +25,29 @@ mixin top-nav()
 	+b.top-nav.block-with-lazy
 		.container
 			.row
-				.col-auto
-					+menu-toggle()
 				.col
+					.row
+						.col-auto
+							+menu-toggle()
+						.col-auto.d-none.d-lg-block.d-xxl-none
+							+e.location
+								+icon('pin')
+								span Самара, ул. Земеца, д. 32
+				.col-auto
+					+e.logo
+						+icon('logo')
 					//- .menu-mobile.menu-mobile--js
 					//- 	+menu-toggle()
 					//- 	+mnu()
-					
+				.col
+					.row.justify-content-end
+						.col-auto.d-none.d-xxl-block
+							+e.location
+								+icon('pin')
+								span Самара, ул. Земеца, д. 32
+						.col-auto.d-none.d-lg-block
+							+e.email(href="mailto:info@pmksite.ru") info@pmksite.ru
+						.col-auto
+							+e.tel(href="tel:+78463720959") +7 (846) 372-09-59
+
 	// end top-nav

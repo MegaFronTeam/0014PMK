@@ -143,7 +143,8 @@
 		position: relative;
 		font-size: inherit;
 		line-height: 125%;
-		color: #8d8f93;
+		// color: #8d8f93;
+		color: rgba($color: $white, $alpha: 0.7) !important;
 
 		&:before {
 			content: "";
@@ -153,10 +154,9 @@
 			height: 1px;
 			left: 0;
 			bottom: -1px;
-			border-bottom: 1px dashed #8d8f93;
+			border-bottom: 1px dashed rgba($color: $white, $alpha: 0.7);
 		}
 		&:hover {
-			color: $white;
 			&:before {
 				opacity: 0;
 			}
