@@ -44,12 +44,7 @@
 			overflow: visible;
 		}
 
-		.swiper-button-disabled {
-			@include media-breakpoint-down(sm) {
-				opacity: 0;
-				pointer-events: none;
-			}
-		}
+		
 	}
 	.swiper-pagination {
 		@include media-breakpoint-up(lg) {
@@ -75,6 +70,7 @@
 	}
 	&__item {
 		@include block(460, 360);
+		overflow: hidden;
 		@include media-breakpoint-up(md) {
 			--ratio: 380/680;
 		}
@@ -84,7 +80,17 @@
 		@include media-breakpoint-up(xxl) {
 			margin-right: rem(100);
 		}
+		&:hover {
+			picture {
+				img {
+					transform: scale(1.1);
+				}
+			}
+		}
 		picture {
+			img {
+				@include mt(1s);
+			}
 			&::after {
 				content: "";
 				position: absolute;

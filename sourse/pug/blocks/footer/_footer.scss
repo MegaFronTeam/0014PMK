@@ -46,6 +46,9 @@
 	&__policy {
 		line-height: 150%;
 		color: #8d8f93;
+		&:hover {
+			color: $white;
+		}
 	}
 	&__logo {
 		display: inline-block;
@@ -54,18 +57,9 @@
 			@include media-breakpoint-between(sm, xxl) {
 				font-size: rem(42);
 			}
-			// @include media-breakpoint-up(xxl) {
-			// 	font-size: rem(56);
-			// }
+			
 		}
-		// img {
-		// 	width: rem(60);
-		// 	height: rem(42);
-		// 	@include media-breakpoint-up(xxl) {
-		// 		width: rem(80);
-		// 		height: rem(56);
-		// 	}
-		// }
+		
 	}
 	&__developer {
 		text-align: center;
@@ -73,8 +67,9 @@
 			text-align: right;
 		}
 		a {
-			&:not(:hover) {
-				color: #8d8f93;
+			color: #8d8f93;
+			&:hover {
+				color: $white;
 			}
 		}
 	}

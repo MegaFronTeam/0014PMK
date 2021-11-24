@@ -20,7 +20,6 @@ html(lang="ru")
 
 		block title
 			title title
-		meta(name="description", content="о чем страница")
 		meta(http-equiv="X-UA-Compatible" content="IE=edge")
 		//- meta(name="viewport", content="width=device-width, shrink-to-fit=no")
 		meta(name="viewport",  content="width=575,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no")
@@ -41,16 +40,25 @@ html(lang="ru")
 				}, { passive: true });
 			}
 		//- meta(name="viewport", content="width=device-width,initial-scale=1.0, shrink-to-fit=no")
-		<meta name="format-detection" content="telephone=no">
-		<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-		<link rel="manifest" href="favicon/site.webmanifest">
-		<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#c79c6e">
-		<link rel="shortcut icon" href="favicon/favicon.ico">
-		<meta name="msapplication-TileColor" content="#23282d">
-		<meta name="msapplication-config" content="favicon/browserconfig.xml">
-		<meta name="theme-color" content="#23282d">
+		meta(name='format-detection' content='telephone=no')
+		link(rel='apple-touch-icon' sizes='180x180' href='favicon/apple-touch-icon.png')
+		link(rel='icon' type='image/png' sizes='32x32' href='favicon/favicon-32x32.png')
+		link(rel='icon' type='image/png' sizes='16x16' href='favicon/favicon-16x16.png')
+		link(rel='manifest' href='favicon/site.webmanifest')
+		link(rel='mask-icon' href='favicon/safari-pinned-tab.svg' color='#c79c6e')
+		link(rel='shortcut icon' href='favicon/favicon.ico')
+		meta(name='msapplication-TileColor' content='#23282d')
+		meta(name='msapplication-config' content='favicon/browserconfig.xml')
+		meta(name='theme-color' content='#23282d')
+
+		meta(name="description", content="Осуществляем заготовку, хранение, переработку и реализацию лома черных и цветных металлов и являемся крупным предприятием, осуществляющим производственную деятельность в указанной отрасли.")
+		meta(property='og:title' content='Поволжская Металлоломная Компания в Самаре')
+		meta(property='og:url' content='https://sample.com')
+		meta(property='og:type' content='website')
+		meta(property='og:description' content='Осуществляем заготовку, хранение, переработку и реализацию лома черных и цветных металлов и являемся крупным предприятием, осуществляющим производственную деятельность в указанной отрасли.')
+		meta(property='og:image' content='https://sample.com/img/og-image.jpg')
+		meta(property='og:image:width' content='1200')
+		meta(property='og:image:height' content='630')
 		+allcss()
 	block variables
 	//- style.

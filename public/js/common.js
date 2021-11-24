@@ -169,6 +169,11 @@ const JSCCommon = {
 			}
 		});
 	},
+	getCurrentYear(el) {
+		let now = new Date();
+		let currentYear = document.querySelector(el);
+		if (currentYear) currentYear.innerText = now.getFullYear();
+	},
 
 };
 const $ = jQuery;
@@ -177,6 +182,7 @@ function eventHandler() {
 	// JSCCommon.ifie();
 	JSCCommon.modalCall();
 	// JSCCommon.tabscostume('tabs');
+	JSCCommon.getCurrentYear('.currentYear');
 	JSCCommon.mobileMenu();
 	JSCCommon.animateScroll();
 	JSCCommon.inputMask();

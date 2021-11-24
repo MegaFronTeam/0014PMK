@@ -86,7 +86,7 @@
 	}
 	&__btn-down {
 		@include a-cent(x);
-		bottom: 2px;
+		bottom: calc(var(--sPB) - #{rem(35)});
 		z-index: 2;
 		width: 40px;
 		&:not(:hover) {
