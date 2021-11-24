@@ -88,6 +88,7 @@
 			}
 		}
 		picture {
+			overflow: hidden;
 			img {
 				@include mt(1s);
 			}
