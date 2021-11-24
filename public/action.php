@@ -46,7 +46,7 @@ $html = '
     }
 
     if (!empty($_POST['textarea'])) {
-        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Сообщение:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['comment'] . '</b></td>';
+        $html .= ' <tr style="background-color: #f8f8f8;"> <td style="padding: 10px; border: #e9e9e9 1px solid;"> Сообщение:</td>   <td style="padding: 10px; border: #e9e9e9 1px solid;">' . $_POST['textarea'] . '</b></td>';
     }
 
     // if (!empty($_POST['tech'])) {

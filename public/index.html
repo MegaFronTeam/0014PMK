@@ -36,7 +36,7 @@
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body class="main-page" data-bg="main.jpg">
+	<body class="main-page">
 		<div class="main-wrapper">
 			<div class="menu-mobile menu-mobile--js">
 				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
@@ -46,11 +46,11 @@
 				<div class="menu-mobile__inner">
 					<div class="container">
 						<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">В начало</a></li>
-							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Услуги</a></li>
-							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О компании</a></li>
-							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Клиенты</a></li>
-							<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
+							<li class="menu-item" itemprop="item"><a href="#headerBlock" itemprop="url">В начало</a></li>
+							<li class="menu-item" itemprop="item"><a href="#sAreasOfActivity" itemprop="url">Услуги</a></li>
+							<li class="menu-item" itemprop="item"><a href="#sAbout" itemprop="url">О компании</a></li>
+							<li class="menu-item" itemprop="item"><a href="#sOurClients" itemprop="url">Клиенты</a></li>
+							<li class="menu-item" itemprop="item"><a href="#sContact" itemprop="url">Контакты</a></li>
 						</ul>
 					</div>
 				</div>
@@ -80,11 +80,11 @@
 								</div>
 							</div>
 							<div class="col-auto">
-								<div class="top-nav__logo">
+								<a class="top-nav__logo" href="/">
 									<svg class="icon icon-logo ">
 										<use xlink:href="img/svg/sprite.svg#logo"></use>
 									</svg>
-								</div>
+								</a>
 							</div>
 							<div class="col">
 								<div class="row justify-content-end">
@@ -112,8 +112,26 @@
 			</header>
 			<!-- end header-->
 			<!-- start headerBlock-->
-			<div class="headerBlock section" id="headerBlock"><iframe src="https://player.vimeo.com/video/643834756?h=56fa57fa12&autoplay=1&loop=1&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-<script src="https://player.vimeo.com/api/player.js"></script>
+			<div class="headerBlock section" id="headerBlock">
+				<div id="made-in-ny"></div><script src="https://player.vimeo.com/api/player.js"></script>
+				<script>
+					const options = {
+					id: 643834756,
+					//- width: 640,
+					loop: true,
+					autoplay: true,
+					background: true,
+					muted: true,
+					responsive: true,
+					controls: false,
+					//- portrait: false,
+					};
+					const player = new Vimeo.Player('made-in-ny', options);
+					player.setVolume(0);
+					player.on('play', function() {
+					console.log('played the video!');
+					});
+				</script>
 				<div class="container">
 					<div class="section-title text-center">
 						<h1>Поволжская Металлоломная Компания</h1>

@@ -79,17 +79,18 @@ const JSCCommon = {
 	},
 	mobileMenu() {
 		if (!this.menuMobileLink) return;
+
 		this.toggleMenu();
 		document.addEventListener('mouseup', (event) => {
 			let container = event.target.closest(".menu-mobile--js.active"); // (1)
-			let link = event.target.closest(".menu-mobile .menu a"); // (1)
+			let link = event.target.closest(".menu-mobile li a"); // (1)
 			let toggle = event.target.closest('.toggle-menu-mobile--js.on'); // (1)
-			if (!container && !toggle) this.closeMenu();
+			if (!container && !toggle || link) this.closeMenu();
 		}, { passive: true });
 
-		window.addEventListener('resize', () => {
-			if (window.matchMedia("(min-width: 992px)").matches) this.closeMenu();
-		}, { passive: true });
+		// window.addEventListener('resize', () => {
+		// 	if (window.matchMedia("(min-width: 992px)").matches) this.closeMenu();
+		// }, { passive: true });
 	},
 	// /mobileMenu
 
@@ -156,7 +157,7 @@ const JSCCommon = {
 		}, { passive: true });
 	},
 	animateScroll() {
-		$(document).on('click', " .menu li a, .scroll-link", function () {
+		$(document).on('click', " .menu li a, .scroll-link, .headerBlock__btn", function () {
 			const elementClick = $(this).attr("href");
 			if (!document.querySelector(elementClick)) {
 				$(this).attr("href", '/' + elementClick)
@@ -177,20 +178,21 @@ function eventHandler() {
 	JSCCommon.modalCall();
 	// JSCCommon.tabscostume('tabs');
 	JSCCommon.mobileMenu();
+	JSCCommon.animateScroll();
 	JSCCommon.inputMask();
 	JSCCommon.sendForm();
 	JSCCommon.heightwindow();
-	JSCCommon.makeDDGroup();
+	//JSCCommon.makeDDGroup();
 	// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
 	// JSCCommon.animateScroll();
 	
 	// JSCCommon.CustomInputFile(); 
-	var x = window.location.host;
-	let screenName;
-	screenName = document.body.dataset.bg;
-	if (screenName && x.includes("localhost:30")) {
-		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
-	}
+	// var x = window.location.host;
+	// let screenName;
+	// screenName = document.body.dataset.bg;
+	// if (screenName && x.includes("localhost:30")) {
+	// 	document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
+	// }
 
 
 	function setFixedNav() {
