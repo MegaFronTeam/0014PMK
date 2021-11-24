@@ -3,7 +3,6 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Поволжская Металлоломная Компания в Самаре</title>
-		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=575,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no">
 		<script>
@@ -22,21 +21,78 @@
 				 w();
 				}, { passive: true });
 			}
-		</script><meta name="format-detection" content="telephone=no">
-<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-<link rel="manifest" href="favicon/site.webmanifest">
-<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#c79c6e">
-<link rel="shortcut icon" href="favicon/favicon.ico">
-<meta name="msapplication-TileColor" content="#23282d">
-<meta name="msapplication-config" content="favicon/browserconfig.xml">
-<meta name="theme-color" content="#23282d">
+		</script>
+		<meta name="format-detection" content="telephone=no">
+		<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+		<link rel="manifest" href="favicon/site.webmanifest">
+		<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#c79c6e">
+		<link rel="shortcut icon" href="favicon/favicon.ico">
+		<meta name="msapplication-TileColor" content="#23282d">
+		<meta name="msapplication-config" content="favicon/browserconfig.xml">
+		<meta name="theme-color" content="#23282d">
+		<meta name="description" content="Осуществляем заготовку, хранение, переработку и реализацию лома черных и цветных металлов и являемся крупным предприятием, осуществляющим производственную деятельность в указанной отрасли.">
+		<meta property="og:title" content="Поволжская Металлоломная Компания в Самаре">
+		<meta property="og:url" content="https://Pmksite.ru">
+		<meta property="og:type" content="website">
+		<meta property="og:description" content="Осуществляем заготовку, хранение, переработку и реализацию лома черных и цветных металлов и являемся крупным предприятием, осуществляющим производственную деятельность в указанной отрасли.">
+		<meta property="og:image" content="https://Pmksite.ru/img/og-image.jpg">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
 		<link href="libs/swiper/swiper.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
+	<style>
+		.loader {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100vh;
+			margin: auto;
+			z-index: 1200;
+			background: #23282D;
+		}
+		.arc {
+			position: absolute;
+			width: 100vw;
+			height: 100vh;
+		}
+		.arc::before, 	.arc::after {
+			content: '';
+			position: absolute;
+			top: calc(50% - 25px);
+			left: calc(50% - 25px);
+		
+			border: 2px solid;
+			border-radius: 50%;
+			width: 50px;
+			height: 50px;
+		}
+		.arc::before {
+			border-color: #FFF;
+			opacity: .1;
+		}
+		.arc::after {
+			border-color: transparent;
+			border-bottom-color: #C79C6E;
+			animation: rotate 1s infinite linear;
+		}
+		@keyframes rotate {
+			100% {
+			transform: rotate(360deg); 
+			} 
+		}
+		
+		.loaded_hiding {overflow: hidden;}
+	</style>
+	<body class="loaded_hiding main-page"> </body>
 	<body class="main-page">
+		<div class="loader">
+			<div class="arc"></div>
+		</div>
 		<div class="main-wrapper">
 			<div class="menu-mobile menu-mobile--js">
 				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
@@ -113,25 +169,11 @@
 			<!-- end header-->
 			<!-- start headerBlock-->
 			<div class="headerBlock section" id="headerBlock">
-				<div id="made-in-ny"></div><script src="https://player.vimeo.com/api/player.js"></script>
-				<script>
-					const options = {
-					id: 643834756,
-					//- width: 640,
-					loop: true,
-					autoplay: true,
-					background: true,
-					muted: true,
-					responsive: true,
-					controls: false,
-					//- portrait: false,
-					};
-					const player = new Vimeo.Player('made-in-ny', options);
-					player.setVolume(0);
-					player.on('play', function() {
-					console.log('played the video!');
-					});
-				</script>
+				<video loading="lazy" preload="auto" no-controls="no-controls" autoplay="autoplay" loop="loop" playsinline="playsinline" muted="muted" poster="img/@2x/webp/video.webp">
+					<source src="video/video.mp4" type="video/mp4"/>
+					<source src="video/video.ogv" type="video/ogv"/>
+					<source src="video/video.webm" type="video/webm"/>
+				</video>
 				<div class="container">
 					<div class="section-title text-center">
 						<h1>Поволжская Металлоломная Компания</h1>
@@ -178,7 +220,7 @@
 										<div class="modal-win">
 											<div class="container">
 												<div class="section-title text-center">
-													<h2>Заготовка, переработка и реализация лома черных и цветных металлов</h2>
+													<h2>Заготовка и переработка лома</h2>
 												</div>
 												<!-- picture-->
 												<picture class="bg-wrap"> 
@@ -191,16 +233,9 @@
 												</picture>
 												<!-- /picture-->
 												<div class="modal-win__content">
-													<p>Компания &laquo;ПМК&raquo; предлагает Вам полный цикл услуг по&nbsp;сносу зданий и&nbsp;демонтажу любых типов объектов. За&nbsp;5&nbsp;лет выполнено 35&nbsp;договорных обязательств по&nbsp;ликвидации, утилизации опасных производственных объектов компании &laquo;РОСНЕФТЬ&raquo; и&nbsp;других предприятий по&nbsp;России.</p>
-													<p>Мы&nbsp;занимаемся разработкой проекта демонтажа и&nbsp;производим снос строений и&nbsp;демонтаж конструкций любой сложности и&nbsp;используем лучшие технологии сноса зданий и&nbsp;технологии демонтажа.</p>
-													<p>ашими постоянными партнерами на&nbsp;данный момент являются несколько крупных заводов в&nbsp;Самарской области.</p>
-													<p>Мы&nbsp;имеем все необходимые допуски и&nbsp;разрешения, а&nbsp;также экологические сертификаты, необходимые для демонтажных работ.</p>
-													<p>Компания &laquo;ПМК&raquo; предлагает свои услуги по&nbsp;демонтажу железобетонных фундаментов всех типов, глубиной от&nbsp;1&nbsp;метра (в&nbsp;том числе демонтаж подземных паркингов и&nbsp;парковок).</p>
-													<p>Утилизация или переработка на&nbsp;месте строительных отходов осуществляется на&nbsp;усмотрение Заказчика и&nbsp;оценивается отдельно. Также после демонтажа фундамента мы&nbsp;можем провести комплекс земляных работ и&nbsp;подготовить котлован под новое строительство.</p>
-													<p>По&nbsp;договоренности с&nbsp;клиентом в&nbsp;процессе работ мы&nbsp;можем полностью или частично сохранить инженерные сети, подведенные к&nbsp;объекту, вывезти или переработать на&nbsp;месте для дальнейшего использования отходы, оставшиеся после демонтажа, а&nbsp;также провести благоустройство территории, подготовив участок к&nbsp;новому строительству. Все эти работы являются дополнительными и&nbsp;оцениваются отдельно.</p>
-													<p>После производства демонтажных работ на&nbsp;строительной площадке образуется большое количество отходов производства, в&nbsp;том числе кирпичной кладки, бетона и&nbsp;железобетона в&nbsp;кусковой форме. В&nbsp;результате их&nbsp;обработки (сортировки) и&nbsp;последующей утилизации путем переработки во&nbsp;вторичный щебень, большая часть, до&nbsp;90% может быть использована вторично. Остальные отходы должны быть размещены (захоронены) на&nbsp;специализированном полигоне, входящем в&nbsp;ГРОРО.</p>
-													<p>Вторичный щебень, полученные путем дробления бетона и&nbsp;кирпича предназначен для применения в&nbsp;качестве заполнителей для бетонов и&nbsp;растворов различного назначения, материалов для оснований автомобильных дорог, устройств обочин, в&nbsp;качестве компонентов готовых смесей, для рекультивации, благоустройства и&nbsp;планировки территорий.</p>
-													<p>Утилизация строительного лома будет осуществлена нашими специалистами с&nbsp;соблюдением всех санитарных и&nbsp;экологических норм.</p>
+													<p>Один из&nbsp;основных видов деятельности компании&nbsp;&mdash; заготовка и&nbsp;переработка лома чёрных и&nbsp;цветных металлов. С&nbsp;начала основания компании потребителям отгружено более 2&nbsp;000&nbsp;000&nbsp;тонн. Мы&nbsp;одни из&nbsp;немногих заводов в&nbsp;регионе, которые кроме авто и&nbsp;ЖД поставок отправляют металлолом водным транспортом.</p>
+													<p>Для организации процесса вывоз от&nbsp;клиентов имеются собственный парк современного спецтранспорта в&nbsp;количестве 26&nbsp;автомобилей. Услуга вывоза лома оказывается бесплатно. Собственная сеть приемных пунктов по&nbsp;Самарской области позволяет нам быть ближе к&nbsp;клиентам.</p>
+													<p>Профессиональные мобильные бригады резчиков имеют возможность производить подрезку любых металлоконструкций на&nbsp;территории заказчика в&nbsp;течение одного-трёх дней с&nbsp;момента подачи заявки. Все указанные услуги, а&nbsp;также высокие закупочные цены и&nbsp;точное взвешивание на&nbsp;электронных весах позволяют нам занимать лидирующие позиции в&nbsp;регионе.</p>
 												</div>
 											</div>
 										</div>
@@ -242,16 +277,9 @@
 												</picture>
 												<!-- /picture-->
 												<div class="modal-win__content">
-													<p>Компания &laquo;ПМК&raquo; предлагает Вам полный цикл услуг по&nbsp;сносу зданий и&nbsp;демонтажу любых типов объектов. За&nbsp;5&nbsp;лет выполнено 35&nbsp;договорных обязательств по&nbsp;ликвидации, утилизации опасных производственных объектов компании &laquo;РОСНЕФТЬ&raquo; и&nbsp;других предприятий по&nbsp;России.</p>
-													<p>Мы&nbsp;занимаемся разработкой проекта демонтажа и&nbsp;производим снос строений и&nbsp;демонтаж конструкций любой сложности и&nbsp;используем лучшие технологии сноса зданий и&nbsp;технологии демонтажа.</p>
-													<p>ашими постоянными партнерами на&nbsp;данный момент являются несколько крупных заводов в&nbsp;Самарской области.</p>
-													<p>Мы&nbsp;имеем все необходимые допуски и&nbsp;разрешения, а&nbsp;также экологические сертификаты, необходимые для демонтажных работ.</p>
-													<p>Компания &laquo;ПМК&raquo; предлагает свои услуги по&nbsp;демонтажу железобетонных фундаментов всех типов, глубиной от&nbsp;1&nbsp;метра (в&nbsp;том числе демонтаж подземных паркингов и&nbsp;парковок).</p>
-													<p>Утилизация или переработка на&nbsp;месте строительных отходов осуществляется на&nbsp;усмотрение Заказчика и&nbsp;оценивается отдельно. Также после демонтажа фундамента мы&nbsp;можем провести комплекс земляных работ и&nbsp;подготовить котлован под новое строительство.</p>
-													<p>По&nbsp;договоренности с&nbsp;клиентом в&nbsp;процессе работ мы&nbsp;можем полностью или частично сохранить инженерные сети, подведенные к&nbsp;объекту, вывезти или переработать на&nbsp;месте для дальнейшего использования отходы, оставшиеся после демонтажа, а&nbsp;также провести благоустройство территории, подготовив участок к&nbsp;новому строительству. Все эти работы являются дополнительными и&nbsp;оцениваются отдельно.</p>
-													<p>После производства демонтажных работ на&nbsp;строительной площадке образуется большое количество отходов производства, в&nbsp;том числе кирпичной кладки, бетона и&nbsp;железобетона в&nbsp;кусковой форме. В&nbsp;результате их&nbsp;обработки (сортировки) и&nbsp;последующей утилизации путем переработки во&nbsp;вторичный щебень, большая часть, до&nbsp;90% может быть использована вторично. Остальные отходы должны быть размещены (захоронены) на&nbsp;специализированном полигоне, входящем в&nbsp;ГРОРО.</p>
-													<p>Вторичный щебень, полученные путем дробления бетона и&nbsp;кирпича предназначен для применения в&nbsp;качестве заполнителей для бетонов и&nbsp;растворов различного назначения, материалов для оснований автомобильных дорог, устройств обочин, в&nbsp;качестве компонентов готовых смесей, для рекультивации, благоустройства и&nbsp;планировки территорий.</p>
-													<p>Утилизация строительного лома будет осуществлена нашими специалистами с&nbsp;соблюдением всех санитарных и&nbsp;экологических норм.</p>
+													<p>ООО &laquo;ПМК&raquo;, соответствует нормам и&nbsp;стандартам безопасности нефтегазовых компаний на&nbsp;линейных объектах и&nbsp;в&nbsp;периметре охранных зон, неукоснительно соблюдает действующее законодательство&nbsp;РФ, корректно выстраивает взаимоотношения со&nbsp;всеми землепользователями.</p>
+													<p>ООО &laquo;ПМК&raquo; имеет все необходимые допуски по&nbsp;экологической безопасности, лицензии, кроме того имеет многолетний опыт документооборота в&nbsp;области земельноправовых отношений (создание проекта производства работ, проекта рекультивации, сотрудничает с&nbsp;НИИ), привлекает лучших специалистов для выполнения сложных задач.</p>
+													<p>Приглашая на&nbsp;демонтаж трубы и&nbsp;выборку наземного лома черных металлов ООО &laquo;ПМК&raquo;, Вы&nbsp;делаете ПРАВИЛЬНЫЙ ВЫБОР!</p>
 												</div>
 											</div>
 										</div>
@@ -280,7 +308,7 @@
 										<div class="modal-win">
 											<div class="container">
 												<div class="section-title text-center">
-													<h2>Демонтаж промышленных <br> объектов</h2>
+													<h2>Демонтаж промышленных объектов</h2>
 												</div>
 												<!-- picture-->
 												<picture class="bg-wrap"> 
@@ -295,7 +323,7 @@
 												<div class="modal-win__content">
 													<p>Компания &laquo;ПМК&raquo; предлагает Вам полный цикл услуг по&nbsp;сносу зданий и&nbsp;демонтажу любых типов объектов. За&nbsp;5&nbsp;лет выполнено 35&nbsp;договорных обязательств по&nbsp;ликвидации, утилизации опасных производственных объектов компании &laquo;РОСНЕФТЬ&raquo; и&nbsp;других предприятий по&nbsp;России.</p>
 													<p>Мы&nbsp;занимаемся разработкой проекта демонтажа и&nbsp;производим снос строений и&nbsp;демонтаж конструкций любой сложности и&nbsp;используем лучшие технологии сноса зданий и&nbsp;технологии демонтажа.</p>
-													<p>ашими постоянными партнерами на&nbsp;данный момент являются несколько крупных заводов в&nbsp;Самарской области.</p>
+													<p>Нашими постоянными партнерами на&nbsp;данный момент являются несколько крупных заводов в&nbsp;Самарской области.</p>
 													<p>Мы&nbsp;имеем все необходимые допуски и&nbsp;разрешения, а&nbsp;также экологические сертификаты, необходимые для демонтажных работ.</p>
 													<p>Компания &laquo;ПМК&raquo; предлагает свои услуги по&nbsp;демонтажу железобетонных фундаментов всех типов, глубиной от&nbsp;1&nbsp;метра (в&nbsp;том числе демонтаж подземных паркингов и&nbsp;парковок).</p>
 													<p>Утилизация или переработка на&nbsp;месте строительных отходов осуществляется на&nbsp;усмотрение Заказчика и&nbsp;оценивается отдельно. Также после демонтажа фундамента мы&nbsp;можем провести комплекс земляных работ и&nbsp;подготовить котлован под новое строительство.</p>
@@ -309,15 +337,15 @@
 									</div>
 								</div>
 								<div class="sAreasOfActivity__slide swiper-slide">
-									<a class="sAreasOfActivity__item bg-wrap link-modal-js" href="#modal-area-2">
+									<a class="sAreasOfActivity__item bg-wrap link-modal-js" href="#modal-area-4">
 										<!-- picture-->
 										<picture class="picture-bg"> 
-											<source type="image/avif" srcset="img/@2x/avif/sAreasOfActivity-2.avif"/>
-											<source type="image/webp" srcset="img/@2x/webp/sAreasOfActivity-2.webp"/><img class="object-fit-js" src="img/@2x/sAreasOfActivity-2.jpg" alt="" loading="lazy"/>
+											<source type="image/avif" srcset="img/@2x/avif/sAreasOfActivity-4.avif"/>
+											<source type="image/webp" srcset="img/@2x/webp/sAreasOfActivity-4.webp"/><img class="object-fit-js" src="img/@2x/sAreasOfActivity-4.jpg" alt="" loading="lazy"/>
 										</picture>
 										<!-- /picture-->
 										<div class="sAreasOfActivity__content">
-											<h4>Демонтаж всех видов трубопроводов</h4>
+											<h4>Строительно-монтажные&nbsp;работы на промышленных объектах</h4>
 											<div class="sAreasOfActivity__btn-wrap">
 												<div class="sAreasOfActivity__btn-more"><span>Подробнее</span>
 													<svg class="icon icon-arrow-right ">
@@ -327,48 +355,40 @@
 											</div>
 										</div>
 									</a>
-									<div id="modal-area-2" style="display: none">
+									<div id="modal-area-4" style="display: none">
 										<div class="modal-win">
 											<div class="container">
 												<div class="section-title text-center">
-													<h2>Демонтаж всех видов трубопроводов</h2>
+													<h2>Строительно-монтажные работы</h2>
 												</div>
 												<!-- picture-->
 												<picture class="bg-wrap"> 
-													<source type="image/avif" srcset="img/@2x/avif/sAreasOfActivity-lg-2.avif" media="(min-width:576px)"/>
-													<source type="image/avif" srcset="img/@1x/avif/sAreasOfActivity-lg-2.avif"/>
-													<source type="image/webp" srcset="img/@2x/webp/sAreasOfActivity-lg-2.webp" media="(min-width:576px)"/>
-													<source type="image/webp" srcset="img/@1x/webp/sAreasOfActivity-lg-2.webp"/>
-													<source type="image/jpg" srcset="img/@2x/avif/sAreasOfActivity-lg-2.jpg" media="(min-width:576px)"/>
-													<source type="image/jpg" srcset="img/@1x/avif/sAreasOfActivity-lg-2.jpg"/><img class="object-fit-js" src="img/@2x/sAreasOfActivity-lg-2.jpg" alt="" loading="lazy"/>
+													<source type="image/avif" srcset="img/@2x/avif/sAreasOfActivity-lg-4.avif" media="(min-width:576px)"/>
+													<source type="image/avif" srcset="img/@1x/avif/sAreasOfActivity-lg-4.avif"/>
+													<source type="image/webp" srcset="img/@2x/webp/sAreasOfActivity-lg-4.webp" media="(min-width:576px)"/>
+													<source type="image/webp" srcset="img/@1x/webp/sAreasOfActivity-lg-4.webp"/>
+													<source type="image/jpg" srcset="img/@2x/avif/sAreasOfActivity-lg-4.jpg" media="(min-width:576px)"/>
+													<source type="image/jpg" srcset="img/@1x/avif/sAreasOfActivity-lg-4.jpg"/><img class="object-fit-js" src="img/@2x/sAreasOfActivity-lg-4.jpg" alt="" loading="lazy"/>
 												</picture>
 												<!-- /picture-->
 												<div class="modal-win__content">
-													<p>Компания &laquo;ПМК&raquo; предлагает Вам полный цикл услуг по&nbsp;сносу зданий и&nbsp;демонтажу любых типов объектов. За&nbsp;5&nbsp;лет выполнено 35&nbsp;договорных обязательств по&nbsp;ликвидации, утилизации опасных производственных объектов компании &laquo;РОСНЕФТЬ&raquo; и&nbsp;других предприятий по&nbsp;России.</p>
-													<p>Мы&nbsp;занимаемся разработкой проекта демонтажа и&nbsp;производим снос строений и&nbsp;демонтаж конструкций любой сложности и&nbsp;используем лучшие технологии сноса зданий и&nbsp;технологии демонтажа.</p>
-													<p>ашими постоянными партнерами на&nbsp;данный момент являются несколько крупных заводов в&nbsp;Самарской области.</p>
-													<p>Мы&nbsp;имеем все необходимые допуски и&nbsp;разрешения, а&nbsp;также экологические сертификаты, необходимые для демонтажных работ.</p>
-													<p>Компания &laquo;ПМК&raquo; предлагает свои услуги по&nbsp;демонтажу железобетонных фундаментов всех типов, глубиной от&nbsp;1&nbsp;метра (в&nbsp;том числе демонтаж подземных паркингов и&nbsp;парковок).</p>
-													<p>Утилизация или переработка на&nbsp;месте строительных отходов осуществляется на&nbsp;усмотрение Заказчика и&nbsp;оценивается отдельно. Также после демонтажа фундамента мы&nbsp;можем провести комплекс земляных работ и&nbsp;подготовить котлован под новое строительство.</p>
-													<p>По&nbsp;договоренности с&nbsp;клиентом в&nbsp;процессе работ мы&nbsp;можем полностью или частично сохранить инженерные сети, подведенные к&nbsp;объекту, вывезти или переработать на&nbsp;месте для дальнейшего использования отходы, оставшиеся после демонтажа, а&nbsp;также провести благоустройство территории, подготовив участок к&nbsp;новому строительству. Все эти работы являются дополнительными и&nbsp;оцениваются отдельно.</p>
-													<p>После производства демонтажных работ на&nbsp;строительной площадке образуется большое количество отходов производства, в&nbsp;том числе кирпичной кладки, бетона и&nbsp;железобетона в&nbsp;кусковой форме. В&nbsp;результате их&nbsp;обработки (сортировки) и&nbsp;последующей утилизации путем переработки во&nbsp;вторичный щебень, большая часть, до&nbsp;90% может быть использована вторично. Остальные отходы должны быть размещены (захоронены) на&nbsp;специализированном полигоне, входящем в&nbsp;ГРОРО.</p>
-													<p>Вторичный щебень, полученные путем дробления бетона и&nbsp;кирпича предназначен для применения в&nbsp;качестве заполнителей для бетонов и&nbsp;растворов различного назначения, материалов для оснований автомобильных дорог, устройств обочин, в&nbsp;качестве компонентов готовых смесей, для рекультивации, благоустройства и&nbsp;планировки территорий.</p>
-													<p>Утилизация строительного лома будет осуществлена нашими специалистами с&nbsp;соблюдением всех санитарных и&nbsp;экологических норм.</p>
+													<p>На&nbsp;сегодняшний день ООО &laquo;ПМК&raquo; выполняет весь комплекс работ на&nbsp;объектах НК&nbsp;&laquo;Роснефть&raquo; (г.Новокуйбышевск) в&nbsp;качестве генерального подрядчика, субподрядчика ООО &laquo;КНГК Ильский НПЗ&raquo; (Краснодарский край), АО&nbsp;&laquo;ВТС&nbsp;&mdash; 9&raquo; &laquo;Проектирование и&nbsp;реконструкция набережной Автозаводского района городского округа Тольятти&raquo; Численность персонала ООО &laquo;ПМК&raquo;, непосредственно задействованных на&nbsp;строительстве объектов составляет более 100&nbsp;сотрудников, в&nbsp;том числе инженерно-технических работников с&nbsp;высокой квалификацией, имеющих членство в&nbsp;Национальном реестре специалистов (НРС), также удостоверения специалистов сварочного производства НАКС.</p>
+													<p>Организация также имеет производственную базу, оснащенную необходимым квалифицированным персоналом, оборудованием для обеспечения своевременного выполнения договорных обязательств на&nbsp;объектах строительства. За&nbsp;время работы на&nbsp;объектах НК&nbsp;&laquo;Роснефть&raquo;, ООО &laquo;КНГК Ильский НПЗ&raquo;, АО&nbsp;&laquo;ВТС&nbsp;&mdash; 9&raquo;, ООО &laquo;ПМК&raquo; зарекомендовала себя наилучшим образом.</p>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
 								<div class="sAreasOfActivity__slide swiper-slide">
-									<a class="sAreasOfActivity__item bg-wrap link-modal-js" href="#modal-area-1">
+									<a class="sAreasOfActivity__item bg-wrap link-modal-js" href="#modal-area-5">
 										<!-- picture-->
 										<picture class="picture-bg"> 
-											<source type="image/avif" srcset="img/@2x/avif/sAreasOfActivity-1.avif"/>
-											<source type="image/webp" srcset="img/@2x/webp/sAreasOfActivity-1.webp"/><img class="object-fit-js" src="img/@2x/sAreasOfActivity-1.jpg" alt="" loading="lazy"/>
+											<source type="image/avif" srcset="img/@2x/avif/sAreasOfActivity-5.avif"/>
+											<source type="image/webp" srcset="img/@2x/webp/sAreasOfActivity-5.webp"/><img class="object-fit-js" src="img/@2x/sAreasOfActivity-5.jpg" alt="" loading="lazy"/>
 										</picture>
 										<!-- /picture-->
 										<div class="sAreasOfActivity__content">
-											<h4>Заготовка, переработка и реализация лома черных и цветных металлов</h4>
+											<h4>Строительно-монтажные работы на объектах гражданской инфраструктуры</h4>
 											<div class="sAreasOfActivity__btn-wrap">
 												<div class="sAreasOfActivity__btn-more"><span>Подробнее</span>
 													<svg class="icon icon-arrow-right ">
@@ -378,77 +398,26 @@
 											</div>
 										</div>
 									</a>
-									<div id="modal-area-1" style="display: none">
+									<div id="modal-area-5" style="display: none">
 										<div class="modal-win">
 											<div class="container">
 												<div class="section-title text-center">
-													<h2>Заготовка, переработка и реализация лома черных и цветных металлов</h2>
+													<h2>Строительно-монтажные работы на объектах гражданской инфраструктуры</h2>
 												</div>
 												<!-- picture-->
 												<picture class="bg-wrap"> 
-													<source type="image/avif" srcset="img/@2x/avif/sAreasOfActivity-lg-1.avif" media="(min-width:576px)"/>
-													<source type="image/avif" srcset="img/@1x/avif/sAreasOfActivity-lg-1.avif"/>
-													<source type="image/webp" srcset="img/@2x/webp/sAreasOfActivity-lg-1.webp" media="(min-width:576px)"/>
-													<source type="image/webp" srcset="img/@1x/webp/sAreasOfActivity-lg-1.webp"/>
-													<source type="image/jpg" srcset="img/@2x/avif/sAreasOfActivity-lg-1.jpg" media="(min-width:576px)"/>
-													<source type="image/jpg" srcset="img/@1x/avif/sAreasOfActivity-lg-1.jpg"/><img class="object-fit-js" src="img/@2x/sAreasOfActivity-lg-1.jpg" alt="" loading="lazy"/>
+													<source type="image/avif" srcset="img/@2x/avif/sAreasOfActivity-lg-5.avif" media="(min-width:576px)"/>
+													<source type="image/avif" srcset="img/@1x/avif/sAreasOfActivity-lg-5.avif"/>
+													<source type="image/webp" srcset="img/@2x/webp/sAreasOfActivity-lg-5.webp" media="(min-width:576px)"/>
+													<source type="image/webp" srcset="img/@1x/webp/sAreasOfActivity-lg-5.webp"/>
+													<source type="image/jpg" srcset="img/@2x/avif/sAreasOfActivity-lg-5.jpg" media="(min-width:576px)"/>
+													<source type="image/jpg" srcset="img/@1x/avif/sAreasOfActivity-lg-5.jpg"/><img class="object-fit-js" src="img/@2x/sAreasOfActivity-lg-5.jpg" alt="" loading="lazy"/>
 												</picture>
 												<!-- /picture-->
 												<div class="modal-win__content">
 													<p>Компания &laquo;ПМК&raquo; предлагает Вам полный цикл услуг по&nbsp;сносу зданий и&nbsp;демонтажу любых типов объектов. За&nbsp;5&nbsp;лет выполнено 35&nbsp;договорных обязательств по&nbsp;ликвидации, утилизации опасных производственных объектов компании &laquo;РОСНЕФТЬ&raquo; и&nbsp;других предприятий по&nbsp;России.</p>
 													<p>Мы&nbsp;занимаемся разработкой проекта демонтажа и&nbsp;производим снос строений и&nbsp;демонтаж конструкций любой сложности и&nbsp;используем лучшие технологии сноса зданий и&nbsp;технологии демонтажа.</p>
-													<p>ашими постоянными партнерами на&nbsp;данный момент являются несколько крупных заводов в&nbsp;Самарской области.</p>
-													<p>Мы&nbsp;имеем все необходимые допуски и&nbsp;разрешения, а&nbsp;также экологические сертификаты, необходимые для демонтажных работ.</p>
-													<p>Компания &laquo;ПМК&raquo; предлагает свои услуги по&nbsp;демонтажу железобетонных фундаментов всех типов, глубиной от&nbsp;1&nbsp;метра (в&nbsp;том числе демонтаж подземных паркингов и&nbsp;парковок).</p>
-													<p>Утилизация или переработка на&nbsp;месте строительных отходов осуществляется на&nbsp;усмотрение Заказчика и&nbsp;оценивается отдельно. Также после демонтажа фундамента мы&nbsp;можем провести комплекс земляных работ и&nbsp;подготовить котлован под новое строительство.</p>
-													<p>По&nbsp;договоренности с&nbsp;клиентом в&nbsp;процессе работ мы&nbsp;можем полностью или частично сохранить инженерные сети, подведенные к&nbsp;объекту, вывезти или переработать на&nbsp;месте для дальнейшего использования отходы, оставшиеся после демонтажа, а&nbsp;также провести благоустройство территории, подготовив участок к&nbsp;новому строительству. Все эти работы являются дополнительными и&nbsp;оцениваются отдельно.</p>
-													<p>После производства демонтажных работ на&nbsp;строительной площадке образуется большое количество отходов производства, в&nbsp;том числе кирпичной кладки, бетона и&nbsp;железобетона в&nbsp;кусковой форме. В&nbsp;результате их&nbsp;обработки (сортировки) и&nbsp;последующей утилизации путем переработки во&nbsp;вторичный щебень, большая часть, до&nbsp;90% может быть использована вторично. Остальные отходы должны быть размещены (захоронены) на&nbsp;специализированном полигоне, входящем в&nbsp;ГРОРО.</p>
-													<p>Вторичный щебень, полученные путем дробления бетона и&nbsp;кирпича предназначен для применения в&nbsp;качестве заполнителей для бетонов и&nbsp;растворов различного назначения, материалов для оснований автомобильных дорог, устройств обочин, в&nbsp;качестве компонентов готовых смесей, для рекультивации, благоустройства и&nbsp;планировки территорий.</p>
-													<p>Утилизация строительного лома будет осуществлена нашими специалистами с&nbsp;соблюдением всех санитарных и&nbsp;экологических норм.</p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="sAreasOfActivity__slide swiper-slide">
-									<a class="sAreasOfActivity__item bg-wrap link-modal-js" href="#modal-area-3">
-										<!-- picture-->
-										<picture class="picture-bg"> 
-											<source type="image/avif" srcset="img/@2x/avif/sAreasOfActivity-3.avif"/>
-											<source type="image/webp" srcset="img/@2x/webp/sAreasOfActivity-3.webp"/><img class="object-fit-js" src="img/@2x/sAreasOfActivity-3.jpg" alt="" loading="lazy"/>
-										</picture>
-										<!-- /picture-->
-										<div class="sAreasOfActivity__content">
-											<h4>Демонтаж промышленных <br> объектов</h4>
-											<div class="sAreasOfActivity__btn-wrap">
-												<div class="sAreasOfActivity__btn-more"><span>Подробнее</span>
-													<svg class="icon icon-arrow-right ">
-														<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
-													</svg>
-												</div>
-											</div>
-										</div>
-									</a>
-									<div id="modal-area-3" style="display: none">
-										<div class="modal-win">
-											<div class="container">
-												<div class="section-title text-center">
-													<h2>Демонтаж промышленных <br> объектов</h2>
-												</div>
-												<!-- picture-->
-												<picture class="bg-wrap"> 
-													<source type="image/avif" srcset="img/@2x/avif/sAreasOfActivity-lg-3.avif" media="(min-width:576px)"/>
-													<source type="image/avif" srcset="img/@1x/avif/sAreasOfActivity-lg-3.avif"/>
-													<source type="image/webp" srcset="img/@2x/webp/sAreasOfActivity-lg-3.webp" media="(min-width:576px)"/>
-													<source type="image/webp" srcset="img/@1x/webp/sAreasOfActivity-lg-3.webp"/>
-													<source type="image/jpg" srcset="img/@2x/avif/sAreasOfActivity-lg-3.jpg" media="(min-width:576px)"/>
-													<source type="image/jpg" srcset="img/@1x/avif/sAreasOfActivity-lg-3.jpg"/><img class="object-fit-js" src="img/@2x/sAreasOfActivity-lg-3.jpg" alt="" loading="lazy"/>
-												</picture>
-												<!-- /picture-->
-												<div class="modal-win__content">
-													<p>Компания &laquo;ПМК&raquo; предлагает Вам полный цикл услуг по&nbsp;сносу зданий и&nbsp;демонтажу любых типов объектов. За&nbsp;5&nbsp;лет выполнено 35&nbsp;договорных обязательств по&nbsp;ликвидации, утилизации опасных производственных объектов компании &laquo;РОСНЕФТЬ&raquo; и&nbsp;других предприятий по&nbsp;России.</p>
-													<p>Мы&nbsp;занимаемся разработкой проекта демонтажа и&nbsp;производим снос строений и&nbsp;демонтаж конструкций любой сложности и&nbsp;используем лучшие технологии сноса зданий и&nbsp;технологии демонтажа.</p>
-													<p>ашими постоянными партнерами на&nbsp;данный момент являются несколько крупных заводов в&nbsp;Самарской области.</p>
+													<p>Нашими постоянными партнерами на&nbsp;данный момент являются несколько крупных заводов в&nbsp;Самарской области.</p>
 													<p>Мы&nbsp;имеем все необходимые допуски и&nbsp;разрешения, а&nbsp;также экологические сертификаты, необходимые для демонтажных работ.</p>
 													<p>Компания &laquo;ПМК&raquo; предлагает свои услуги по&nbsp;демонтажу железобетонных фундаментов всех типов, глубиной от&nbsp;1&nbsp;метра (в&nbsp;том числе демонтаж подземных паркингов и&nbsp;парковок).</p>
 													<p>Утилизация или переработка на&nbsp;месте строительных отходов осуществляется на&nbsp;усмотрение Заказчика и&nbsp;оценивается отдельно. Также после демонтажа фундамента мы&nbsp;можем провести комплекс земляных работ и&nbsp;подготовить котлован под новое строительство.</p>
@@ -548,15 +517,59 @@
 			</section>
 			<!-- end sAbout-->
 			<!-- start sAdvantages-->
-			<section class="sAdvantages section bg-wrap" id="sAdvantages">
-				<picture class="picture-bg">
-					<source type="image/webp" srcset="img/@2x/webp/sAdvantages-bg.webp" media="(min-width:992px)"/>
-					<source type="image/webp" srcset="img/@2x/webp/sAdvantages-bg-md.webp" media="(min-width:768px)"/>
-					<source type="image/webp" srcset="img/@2x/webp/sAdvantages-bg-sm.webp"/>
-					<source type="image/jpg" srcset="img/@2x/sAdvantages-bg.jpg" media="(min-width:992px)"/>
-					<source type="image/jpg" srcset="img/@2x/sAdvantages-bg-md.jpg" media="(min-width:768px)"/>
-					<source type="image/jpg" srcset="img/@2x/sAdvantages-bg-sm.jpg"/><img class="object-fit-js" src="img/@2x/sAdvantages-bg-sm.jpg" alt="" loading="lazy"/>
-				</picture>
+			<section class="sAdvantages section" id="sAdvantages">
+				<div class="sAdvantages__slider-bg sAdvantages__slider-bg--js swiper">
+					<div class="swiper-wrapper">
+						<div class="sAdvantages__slide-bg swiper-slide bg-wrap">
+							<!-- picture-->
+							<picture class="picture-bg"> 
+								<source type="image/avif" srcset="img/@2x/avif/sAdvantages-bg-1.avif" media="(min-width:576px)"/>
+								<source type="image/avif" srcset="img/@1x/avif/sAdvantages-bg-1.avif"/>
+								<source type="image/webp" srcset="img/@2x/webp/sAdvantages-bg-1.webp" media="(min-width:576px)"/>
+								<source type="image/webp" srcset="img/@1x/webp/sAdvantages-bg-1.webp"/>
+								<source type="image/jpg" srcset="img/@2x/avif/sAdvantages-bg-1.jpg" media="(min-width:576px)"/>
+								<source type="image/jpg" srcset="img/@1x/avif/sAdvantages-bg-1.jpg"/><img class="object-fit-js" src="img/@2x/sAdvantages-bg-1.jpg" alt="" loading="lazy"/>
+							</picture>
+							<!-- /picture-->
+						</div>
+						<div class="sAdvantages__slide-bg swiper-slide bg-wrap">
+							<!-- picture-->
+							<picture class="picture-bg"> 
+								<source type="image/avif" srcset="img/@2x/avif/sAdvantages-bg-2.avif" media="(min-width:576px)"/>
+								<source type="image/avif" srcset="img/@1x/avif/sAdvantages-bg-2.avif"/>
+								<source type="image/webp" srcset="img/@2x/webp/sAdvantages-bg-2.webp" media="(min-width:576px)"/>
+								<source type="image/webp" srcset="img/@1x/webp/sAdvantages-bg-2.webp"/>
+								<source type="image/jpg" srcset="img/@2x/avif/sAdvantages-bg-2.jpg" media="(min-width:576px)"/>
+								<source type="image/jpg" srcset="img/@1x/avif/sAdvantages-bg-2.jpg"/><img class="object-fit-js" src="img/@2x/sAdvantages-bg-2.jpg" alt="" loading="lazy"/>
+							</picture>
+							<!-- /picture-->
+						</div>
+						<div class="sAdvantages__slide-bg swiper-slide bg-wrap">
+							<!-- picture-->
+							<picture class="picture-bg"> 
+								<source type="image/avif" srcset="img/@2x/avif/sAdvantages-bg-3.avif" media="(min-width:576px)"/>
+								<source type="image/avif" srcset="img/@1x/avif/sAdvantages-bg-3.avif"/>
+								<source type="image/webp" srcset="img/@2x/webp/sAdvantages-bg-3.webp" media="(min-width:576px)"/>
+								<source type="image/webp" srcset="img/@1x/webp/sAdvantages-bg-3.webp"/>
+								<source type="image/jpg" srcset="img/@2x/avif/sAdvantages-bg-3.jpg" media="(min-width:576px)"/>
+								<source type="image/jpg" srcset="img/@1x/avif/sAdvantages-bg-3.jpg"/><img class="object-fit-js" src="img/@2x/sAdvantages-bg-3.jpg" alt="" loading="lazy"/>
+							</picture>
+							<!-- /picture-->
+						</div>
+						<div class="sAdvantages__slide-bg swiper-slide bg-wrap">
+							<!-- picture-->
+							<picture class="picture-bg"> 
+								<source type="image/avif" srcset="img/@2x/avif/sAdvantages-bg-4.avif" media="(min-width:576px)"/>
+								<source type="image/avif" srcset="img/@1x/avif/sAdvantages-bg-4.avif"/>
+								<source type="image/webp" srcset="img/@2x/webp/sAdvantages-bg-4.webp" media="(min-width:576px)"/>
+								<source type="image/webp" srcset="img/@1x/webp/sAdvantages-bg-4.webp"/>
+								<source type="image/jpg" srcset="img/@2x/avif/sAdvantages-bg-4.jpg" media="(min-width:576px)"/>
+								<source type="image/jpg" srcset="img/@1x/avif/sAdvantages-bg-4.jpg"/><img class="object-fit-js" src="img/@2x/sAdvantages-bg-4.jpg" alt="" loading="lazy"/>
+							</picture>
+							<!-- /picture-->
+						</div>
+					</div>
+				</div>
 				<div class="container">
 					<div class="section-title">
 						<h2>Более 22 лет в сфере металлолома</h2>
@@ -743,13 +756,13 @@
 						</div>
 						<div class="col-md-6">
 							<div class="form-wrap">
-								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="name" type="text" placeholder="Ваше имя *" required="required"/>
+								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="name" type="text" placeholder="Ваше имя"/>
 								</div>
 								<!-- +e.input-wrap-->
-								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="email" type="email" placeholder="E-mail *" required="required"/>
+								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="email" type="email" placeholder="E-mail"/>
 								</div>
 								<!-- +e.input-wrap-->
-								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Телефон *" required="required"/>
+								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Телефон" required="required"/>
 								</div>
 								<!-- +e.input-wrap-->
 								<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" name="textarea" placeholder="Сообщение"></textarea>
@@ -796,7 +809,7 @@
 							</a>
 						</div>
 						<div class="col-12 col-md order-md-first text-center text-md-start">
-							<div class="footer__copyright">© 2021 ООО «Первая Металлоломная Компания»
+							<div class="footer__copyright">© <span class="currentYear"></span> ООО «Первая Металлоломная Компания»
 							</div>
 							<a class="footer__policy" href="#">Политика конфиденцильности
 							</a>

@@ -9,6 +9,17 @@
 	@include media-breakpoint-up(xxl) {
 		--sTPB: #{rem(100)};
 	}
+	position: relative;
+	&__slider-bg{
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		right: 0;
+	}
+	&__slide-bg{
+		@include mt;
+	}
 	color: $white;
 	.section-title {
 		text-align: center;
@@ -92,6 +103,26 @@
 		}
 	}
 	&__slide {
+		color: #24292e;
+			@include media-breakpoint-up(md) { 
+				color: #8d8f93;
+				@include mt;
+				&.swiper-slide-thumb-active{
+						--w: 1;
+						
+				}
+				&:not(.swiper-slide-thumb-active){
+						 .sAdvantages__item .h3:after, .sAdvantages__item h3:after {
+								transition: transform 0s  !important;
+								// opacity: 0;
+						 }
+				}
+				&:hover,
+				&.swiper-slide-thumb-active{
+					color: #fff;
+				}
+			}
+			cursor: pointer;
 		@include media-breakpoint-down(md) {
 			background-color: $white;
 			border-radius: 15px;
@@ -102,14 +133,16 @@
 		height: 100%;
 		display: flex;
 		flex-direction: column;
+		
+		cursor: pointer;
 		@include media-breakpoint-down(md) {
 			text-align: center;
 		}
 		&:hover {
 			h3 {
 				&::after {
-					transform: scaleX(1);
-					opacity: 1;
+					// transform: scaleX(1);
+					// opacity: 1;
 				}
 			}
 		}
@@ -119,7 +152,6 @@
 			font-size: rem(60);
 			padding-bottom: rem(30);
 			margin-bottom: rem(30);
-			color: #8d8f93;
 			@include media-breakpoint-between(md, xxl) {
 				font-size: rem(40);
 				padding-bottom: rem(20);
@@ -151,10 +183,10 @@
 				bottom: 0;
 				background-color: $primary;
 				z-index: 2;
-				transform: scaleX(0);
-				opacity: 0;
+				transform: scaleX(var(--w,0));
+				// opacity: 0;
 				transform-origin: left;
-				transition: transform 5s ease-in-out;
+				transition: transform 5s;
 				@include media-breakpoint-down(md) {
 					@include a-cent(x);
 					max-width: 78%;
@@ -165,13 +197,13 @@
 			flex-grow: 1;
 			font-size: rem(30);
 			font-weight: normal;
-			color: #24292e;
-			@include media-breakpoint-between(md, xxl) {
-				font-size: rem(20);
-			}
+			// color: #24292e;
 			@include media-breakpoint-up(md) {
 				font-weight: bold;
-				color: #8d8f93;
+				// color: #8d8f93;
+			}
+			@include media-breakpoint-between(md, xxl) {
+				font-size: rem(20);
 			}
 			&:last-child {
 				margin-bottom: 0;

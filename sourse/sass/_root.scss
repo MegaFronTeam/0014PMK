@@ -15,7 +15,7 @@
 		--sPB: #{rem(120)};
 		--sTPB: #{rem(80)};
 	}
-	@include media-breakpoint-up(xxl) {
+	@include media-breakpoint-up(xl) {
 		--sPT: #{rem(160)};
 		--sPB: #{rem(160)};
 		--sTPB: #{rem(100)};
