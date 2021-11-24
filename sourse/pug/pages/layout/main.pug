@@ -61,10 +61,55 @@ html(lang="ru")
 		meta(property='og:image:height' content='630')
 		+allcss()
 	block variables
-	//- style.
-	//- 	.loaded_hiding {  opacity: 0; pointer-events: none;  } .loaded_hiding::before { display: none; }
-	//- body.loaded_hiding(class= mainPage) 
+	style.
+		
+		.loader {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100vh;
+			margin: auto;
+			z-index: 1200;
+			background: #23282D;
+		}
+		.arc {
+			position: absolute;
+			width: 100vw;
+			height: 100vh;
+		}
+		.arc::before, 	.arc::after {
+			content: '';
+			position: absolute;
+			top: calc(50% - 25px);
+			left: calc(50% - 25px);
+
+			border: 2px solid;
+			border-radius: 50%;
+			width: 50px;
+			height: 50px;
+		}
+		.arc::before {
+			border-color: #FFF;
+			opacity: .1;
+		}
+		.arc::after {
+			border-color: transparent;
+			border-bottom-color: #C79C6E;
+			animation: rotate 1s infinite linear;
+		}
+		@keyframes rotate {
+			100% {
+			transform: rotate(360deg); 
+			} 
+		}
+
+		.loaded_hiding {overflow: hidden;}
+	body.loaded_hiding(class= mainPage) 
 	body(class= mainPage )
+		+b.loader
+			.arc
+
 		.main-wrapper
 			block pagecontent
 				h3 content

@@ -306,42 +306,47 @@ function eventHandler() {
 			},
 		}
 	});
+
+
 	const sAdvantagesSlider = new Swiper('.sAdvantages__slider--js', {
 		slidesPerView: 'auto',
-		lazy: {
-			loadPrevNext: true,
-		},
 		watchOverflow: true,
 		spaceBetween: 24,
-		// navigation: {
-		// 	nextEl: '.sAreasOfActivity__slider .swiper-button-next',
-		// 	prevEl: '.sAreasOfActivity__slider .swiper-button-prev',
-		// },
 		pagination: {
 			el: ' .sAdvantages .swiper-pagination',
 			type: 'bullets',
 			clickable: true,
-		}
-		// breakpoints: {
-		// 	576: {
-		// 		spaceBetween: 30,
-		// 		slidesPerView: 1
-		// 	},
-		// 	// 768: {
-		// 	// 	spaceBetween: 20,
-		// 	// 	slidesPerView: 'auto'
-		// 	// },
-		// 	992: {
-		// 		spaceBetween: 30,
-		// 		slidesPerView: 3
-		// 	},
-		// 	1400: {
-		// 		spaceBetween: 0,
-		// 		slidesPerView: 2
-		// 	},
-		// 	// when window width is >= 640px
-		// }
+		},
+		autoplay: {
+			delay: 5000,
+		},
 	});
+
+	const sAdvantagesBgSlider = new Swiper('.sAdvantages__slider-bg--js', {
+		slidesPerView: 1,
+		lazy: {
+			loadPrevNext: true,
+		},
+		effect: 'fade',
+		fadeEffect: {
+			crossFade: true
+		},
+		watchOverflow: true,
+		spaceBetween: 0,  
+		autoplay: {
+			delay: 5000,
+		},
+		thumbs: {
+			swiper: sAdvantagesSlider
+		}
+	});
+
+	$(".sAdvantages__slide").click(function(){
+		sAdvantagesBgSlider.autoplay.start();
+		sAdvantagesSlider.autoplay.start();
+	})
+
+
 	// modal window
 
 	
@@ -353,13 +358,14 @@ if (document.readyState !== 'loading') {
 	document.addEventListener('DOMContentLoaded', eventHandler);
 }
 
-// window.onload = function () {
-// 	document.body.classList.add('loaded_hiding');
-// 	window.setTimeout(function () {
-// 		document.body.classList.add('loaded');
-// 		document.body.classList.remove('loaded_hiding');
-// 	}, 500);
-// }
+window.onload = function () {
+	// document.body.classList.add('loaded_hiding');
+	window.setTimeout(function () {
+		// document.body.classList.add('loaded');
+		document.body.classList.remove('loaded_hiding');
+		document.querySelector('.loader').classList.add('off');
+	}, 500);
+}
 
 if (document.querySelector("#map")) {
 	

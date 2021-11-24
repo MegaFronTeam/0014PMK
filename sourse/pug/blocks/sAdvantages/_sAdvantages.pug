@@ -1,14 +1,19 @@
 mixin sAdvantages(data)
 	// start sAdvantages
-	+b.SECTION.sAdvantages.section.bg-wrap#sAdvantages&attributes(attributes)
-		picture.picture-bg
-			source(type='image/webp' srcset='img/@2x/webp/sAdvantages-bg.webp' media='(min-width:992px)')
-			source(type='image/webp' srcset='img/@2x/webp/sAdvantages-bg-md.webp' media='(min-width:768px)')
-			source(type='image/webp' srcset='img/@2x/webp/sAdvantages-bg-sm.webp')
-			source(type='image/jpg' srcset='img/@2x/sAdvantages-bg.jpg' media='(min-width:992px)')
-			source(type='image/jpg' srcset='img/@2x/sAdvantages-bg-md.jpg' media='(min-width:768px)')
-			source(type='image/jpg' srcset='img/@2x/sAdvantages-bg-sm.jpg')
-			img.object-fit-js(src='img/@2x/sAdvantages-bg-sm.jpg' alt='' loading='lazy')
+	+b.SECTION.sAdvantages.section#sAdvantages&attributes(attributes)
+		+e.slider-bg--js.swiper
+			.swiper-wrapper
+				- for (var x = 1; x < 5; x++)
+					+e.slide-bg.swiper-slide.bg-wrap
+						+pic(`sAdvantages-bg-${x}.jpg`,'bg').picture-bg
+		//- picture.picture-bg
+		//- 	source(type='image/webp' srcset='img/@2x/webp/sAdvantages-bg.webp' media='(min-width:992px)')
+		//- 	source(type='image/webp' srcset='img/@2x/webp/sAdvantages-bg-md.webp' media='(min-width:768px)')
+		//- 	source(type='image/webp' srcset='img/@2x/webp/sAdvantages-bg-sm.webp')
+		//- 	source(type='image/jpg' srcset='img/@2x/sAdvantages-bg.jpg' media='(min-width:992px)')
+		//- 	source(type='image/jpg' srcset='img/@2x/sAdvantages-bg-md.jpg' media='(min-width:768px)')
+		//- 	source(type='image/jpg' srcset='img/@2x/sAdvantages-bg-sm.jpg')
+		//- 	img.object-fit-js(src='img/@2x/sAdvantages-bg-sm.jpg' alt='' loading='lazy')
 		.container
 			+b.section-title
 				h2 Более 22 лет в сфере металлолома

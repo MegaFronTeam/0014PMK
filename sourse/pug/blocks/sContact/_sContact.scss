@@ -184,7 +184,8 @@
 			// 	height: 100%;
 			// }
 		 .ymaps-2-1-79-ground-pane{
-			 @include mt;
+			//  @include mt;
+			transition: filter .3s;
 			 
 		 }
 			&:not(:hover) .ymaps-2-1-79-ground-pane{

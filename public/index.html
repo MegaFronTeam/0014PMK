@@ -44,7 +44,55 @@
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
+	<style>
+		.loader {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100vh;
+			margin: auto;
+			z-index: 1200;
+			background: #23282D;
+		}
+		.arc {
+			position: absolute;
+			width: 100vw;
+			height: 100vh;
+		}
+		.arc::before, 	.arc::after {
+			content: '';
+			position: absolute;
+			top: calc(50% - 25px);
+			left: calc(50% - 25px);
+		
+			border: 2px solid;
+			border-radius: 50%;
+			width: 50px;
+			height: 50px;
+		}
+		.arc::before {
+			border-color: #FFF;
+			opacity: .1;
+		}
+		.arc::after {
+			border-color: transparent;
+			border-bottom-color: #C79C6E;
+			animation: rotate 1s infinite linear;
+		}
+		@keyframes rotate {
+			100% {
+			transform: rotate(360deg); 
+			} 
+		}
+		
+		.loaded_hiding {overflow: hidden;}
+	</style>
+	<body class="loaded_hiding main-page"> </body>
 	<body class="main-page">
+		<div class="loader">
+			<div class="arc"></div>
+		</div>
 		<div class="main-wrapper">
 			<div class="menu-mobile menu-mobile--js">
 				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
@@ -121,25 +169,11 @@
 			<!-- end header-->
 			<!-- start headerBlock-->
 			<div class="headerBlock section" id="headerBlock">
-				<div id="made-in-ny"></div><script src="https://player.vimeo.com/api/player.js"></script>
-				<script>
-					const options = {
-					id: 643834756,
-					//- width: 640,
-					loop: true,
-					autoplay: true,
-					background: true,
-					muted: true,
-					responsive: true,
-					controls: false,
-					//- portrait: false,
-					};
-					const player = new Vimeo.Player('made-in-ny', options);
-					player.setVolume(0);
-					player.on('play', function() {
-					console.log('played the video!');
-					});
-				</script>
+				<video loading="lazy" preload="auto" no-controls="no-controls" autoplay="autoplay" loop="loop" playsinline="playsinline" muted="muted" poster="img/@2x/webp/video.webp">
+					<source src="video/video.mp4" type="video/mp4"/>
+					<source src="video/video.ogv" type="video/ogv"/>
+					<source src="video/video.webm" type="video/webm"/>
+				</video>
 				<div class="container">
 					<div class="section-title text-center">
 						<h1>Поволжская Металлоломная Компания</h1>
@@ -483,15 +517,59 @@
 			</section>
 			<!-- end sAbout-->
 			<!-- start sAdvantages-->
-			<section class="sAdvantages section bg-wrap" id="sAdvantages">
-				<picture class="picture-bg">
-					<source type="image/webp" srcset="img/@2x/webp/sAdvantages-bg.webp" media="(min-width:992px)"/>
-					<source type="image/webp" srcset="img/@2x/webp/sAdvantages-bg-md.webp" media="(min-width:768px)"/>
-					<source type="image/webp" srcset="img/@2x/webp/sAdvantages-bg-sm.webp"/>
-					<source type="image/jpg" srcset="img/@2x/sAdvantages-bg.jpg" media="(min-width:992px)"/>
-					<source type="image/jpg" srcset="img/@2x/sAdvantages-bg-md.jpg" media="(min-width:768px)"/>
-					<source type="image/jpg" srcset="img/@2x/sAdvantages-bg-sm.jpg"/><img class="object-fit-js" src="img/@2x/sAdvantages-bg-sm.jpg" alt="" loading="lazy"/>
-				</picture>
+			<section class="sAdvantages section" id="sAdvantages">
+				<div class="sAdvantages__slider-bg sAdvantages__slider-bg--js swiper">
+					<div class="swiper-wrapper">
+						<div class="sAdvantages__slide-bg swiper-slide bg-wrap">
+							<!-- picture-->
+							<picture class="picture-bg"> 
+								<source type="image/avif" srcset="img/@2x/avif/sAdvantages-bg-1.avif" media="(min-width:576px)"/>
+								<source type="image/avif" srcset="img/@1x/avif/sAdvantages-bg-1.avif"/>
+								<source type="image/webp" srcset="img/@2x/webp/sAdvantages-bg-1.webp" media="(min-width:576px)"/>
+								<source type="image/webp" srcset="img/@1x/webp/sAdvantages-bg-1.webp"/>
+								<source type="image/jpg" srcset="img/@2x/avif/sAdvantages-bg-1.jpg" media="(min-width:576px)"/>
+								<source type="image/jpg" srcset="img/@1x/avif/sAdvantages-bg-1.jpg"/><img class="object-fit-js" src="img/@2x/sAdvantages-bg-1.jpg" alt="" loading="lazy"/>
+							</picture>
+							<!-- /picture-->
+						</div>
+						<div class="sAdvantages__slide-bg swiper-slide bg-wrap">
+							<!-- picture-->
+							<picture class="picture-bg"> 
+								<source type="image/avif" srcset="img/@2x/avif/sAdvantages-bg-2.avif" media="(min-width:576px)"/>
+								<source type="image/avif" srcset="img/@1x/avif/sAdvantages-bg-2.avif"/>
+								<source type="image/webp" srcset="img/@2x/webp/sAdvantages-bg-2.webp" media="(min-width:576px)"/>
+								<source type="image/webp" srcset="img/@1x/webp/sAdvantages-bg-2.webp"/>
+								<source type="image/jpg" srcset="img/@2x/avif/sAdvantages-bg-2.jpg" media="(min-width:576px)"/>
+								<source type="image/jpg" srcset="img/@1x/avif/sAdvantages-bg-2.jpg"/><img class="object-fit-js" src="img/@2x/sAdvantages-bg-2.jpg" alt="" loading="lazy"/>
+							</picture>
+							<!-- /picture-->
+						</div>
+						<div class="sAdvantages__slide-bg swiper-slide bg-wrap">
+							<!-- picture-->
+							<picture class="picture-bg"> 
+								<source type="image/avif" srcset="img/@2x/avif/sAdvantages-bg-3.avif" media="(min-width:576px)"/>
+								<source type="image/avif" srcset="img/@1x/avif/sAdvantages-bg-3.avif"/>
+								<source type="image/webp" srcset="img/@2x/webp/sAdvantages-bg-3.webp" media="(min-width:576px)"/>
+								<source type="image/webp" srcset="img/@1x/webp/sAdvantages-bg-3.webp"/>
+								<source type="image/jpg" srcset="img/@2x/avif/sAdvantages-bg-3.jpg" media="(min-width:576px)"/>
+								<source type="image/jpg" srcset="img/@1x/avif/sAdvantages-bg-3.jpg"/><img class="object-fit-js" src="img/@2x/sAdvantages-bg-3.jpg" alt="" loading="lazy"/>
+							</picture>
+							<!-- /picture-->
+						</div>
+						<div class="sAdvantages__slide-bg swiper-slide bg-wrap">
+							<!-- picture-->
+							<picture class="picture-bg"> 
+								<source type="image/avif" srcset="img/@2x/avif/sAdvantages-bg-4.avif" media="(min-width:576px)"/>
+								<source type="image/avif" srcset="img/@1x/avif/sAdvantages-bg-4.avif"/>
+								<source type="image/webp" srcset="img/@2x/webp/sAdvantages-bg-4.webp" media="(min-width:576px)"/>
+								<source type="image/webp" srcset="img/@1x/webp/sAdvantages-bg-4.webp"/>
+								<source type="image/jpg" srcset="img/@2x/avif/sAdvantages-bg-4.jpg" media="(min-width:576px)"/>
+								<source type="image/jpg" srcset="img/@1x/avif/sAdvantages-bg-4.jpg"/><img class="object-fit-js" src="img/@2x/sAdvantages-bg-4.jpg" alt="" loading="lazy"/>
+							</picture>
+							<!-- /picture-->
+						</div>
+					</div>
+				</div>
 				<div class="container">
 					<div class="section-title">
 						<h2>Более 22 лет в сфере металлолома</h2>
