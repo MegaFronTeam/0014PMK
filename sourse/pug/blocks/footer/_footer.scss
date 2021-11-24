@@ -45,9 +45,8 @@
 	}
 	&__policy {
 		line-height: 150%;
-		color: #8d8f93;
-		&:hover {
-			color: $white;
+		&:not(:hover) {
+			color: #8d8f93;
 		}
 	}
 	&__logo {
@@ -57,9 +56,7 @@
 			@include media-breakpoint-between(sm, xxl) {
 				font-size: rem(42);
 			}
-			
 		}
-		
 	}
 	&__developer {
 		text-align: center;
@@ -67,9 +64,9 @@
 			text-align: right;
 		}
 		a {
-			color: #8d8f93;
-			&:hover {
-				color: $white;
+			// color: #8d8f93;
+			&:not(:hover) {
+				color: #8d8f93;
 			}
 		}
 	}
