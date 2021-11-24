@@ -1,8 +1,26 @@
 mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
-		<iframe src="https://player.vimeo.com/video/643834756?h=56fa57fa12&autoplay=1&loop=1&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+		//- <iframe src="https://player.vimeo.com/video/643834756?h=56fa57fa12&autoplay=1&loop=1&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+		#made-in-ny
 		<script src="https://player.vimeo.com/api/player.js"></script>
+		script.
+			const options = {
+			id: 643834756,
+			//- width: 640,
+			loop: true,
+			autoplay: true,
+			background: true,
+			muted: true,
+			responsive: true,
+			controls: false,
+			//- portrait: false,
+			};
+			const player = new Vimeo.Player('made-in-ny', options);
+			player.setVolume(0);
+			player.on('play', function() {
+			console.log('played the video!');
+			});
 		.container
 			+b.section-title.text-center
 				h1 Поволжская Металлоломная Компания
