@@ -10,19 +10,22 @@
 		--sTPB: #{rem(100)};
 	}
 	position: relative;
-	&__slider-bg{
+	&__slider-bg {
 		position: absolute;
 		left: 0;
 		top: 0;
 		bottom: 0;
 		right: 0;
 	}
-	&__slide-bg{
+	&__slide-bg {
 		@include mt;
 	}
 	color: $white;
 	.section-title {
+		position: relative;
+		z-index: 2;
 		text-align: center;
+		pointer-events: none;
 		@include media-breakpoint-up(lg) {
 			text-align: left;
 		}
@@ -43,7 +46,7 @@
 			font-size: rem(24);
 			line-height: 150%;
 			color: #ffffff;
-			opacity: 0.7;
+			// opacity: 0.7;
 			@include media-breakpoint-up(sm) {
 				font-size: rem(16);
 			}
@@ -92,6 +95,10 @@
 				--bs-gutter-x: #{rem(40)};
 			}
 		}
+		& + .swiper-pagination {
+			position: relative;
+			z-index: 2;
+		}
 	}
 	.container {
 		.sAdvantages__slider {
@@ -104,25 +111,25 @@
 	}
 	&__slide {
 		color: #24292e;
-			@include media-breakpoint-up(md) { 
-				color: #8d8f93;
-				@include mt;
-				&.swiper-slide-thumb-active{
-						--w: 1;
-						
-				}
-				&:not(.swiper-slide-thumb-active){
-						 .sAdvantages__item .h3:after, .sAdvantages__item h3:after {
-								transition: transform 0s  !important;
-								// opacity: 0;
-						 }
-				}
-				&:hover,
-				&.swiper-slide-thumb-active{
-					color: #fff;
+		@include media-breakpoint-up(md) {
+			color: #8d8f93;
+			@include mt;
+			&.swiper-slide-thumb-active {
+				--w: 1;
+			}
+			&:not(.swiper-slide-thumb-active) {
+				.sAdvantages__item .h3:after,
+				.sAdvantages__item h3:after {
+					transition: transform 0s !important;
+					// opacity: 0;
 				}
 			}
-			cursor: pointer;
+			&:hover,
+			&.swiper-slide-thumb-active {
+				color: #fff;
+			}
+		}
+		cursor: pointer;
 		@include media-breakpoint-down(md) {
 			background-color: $white;
 			border-radius: 15px;
@@ -133,7 +140,7 @@
 		height: 100%;
 		display: flex;
 		flex-direction: column;
-		
+
 		cursor: pointer;
 		@include media-breakpoint-down(md) {
 			text-align: center;
@@ -183,7 +190,7 @@
 				bottom: 0;
 				background-color: $primary;
 				z-index: 2;
-				transform: scaleX(var(--w,0));
+				transform: scaleX(var(--w, 0));
 				// opacity: 0;
 				transform-origin: left;
 				transition: transform 5s;

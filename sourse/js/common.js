@@ -19,11 +19,11 @@ const JSCCommon = {
 			l10n: {
 				Escape: "Закрыть",
 				NEXT: "Вперед",
-				PREV: "Назад", 
-			}, 
-		}); 
-		document.querySelectorAll(".modal-close-js").forEach(el=>{
-			el.addEventListener("click", ()=>{
+				PREV: "Назад",
+			},
+		});
+		document.querySelectorAll(".modal-close-js").forEach(el => {
+			el.addEventListener("click", () => {
 				Fancybox.close();
 			})
 		})
@@ -64,7 +64,7 @@ const JSCCommon = {
 			if (!toggleEv) return;
 			toggle.forEach(el => el.classList.toggle("on"));
 			menu.classList.toggle("active");
-			[document.body, document.querySelector('html')].forEach(el => el.classList.toggle("fixed")); 
+			[document.body, document.querySelector('html')].forEach(el => el.classList.toggle("fixed"));
 		}, { passive: true });
 	},
 	closeMenu() {
@@ -73,7 +73,7 @@ const JSCCommon = {
 		if (menu.classList.contains("active")) {
 			this.btnToggleMenuMobile.forEach(element => element.classList.remove("on"));
 			this.menuMobile.classList.remove("active");
-			[document.body, document.querySelector('html')].forEach(el => el.classList.remove("fixed")); 
+			[document.body, document.querySelector('html')].forEach(el => el.classList.remove("fixed"));
 		}
 
 	},
@@ -191,7 +191,7 @@ function eventHandler() {
 	//JSCCommon.makeDDGroup();
 	// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
 	// JSCCommon.animateScroll();
-	
+
 	// JSCCommon.CustomInputFile(); 
 	// var x = window.location.host;
 	// let screenName;
@@ -332,7 +332,7 @@ function eventHandler() {
 			crossFade: true
 		},
 		watchOverflow: true,
-		spaceBetween: 0,  
+		spaceBetween: 0,
 		autoplay: {
 			delay: 5000,
 		},
@@ -341,7 +341,10 @@ function eventHandler() {
 		}
 	});
 
-	$(".sAdvantages__slide").click(function(){
+	// sAdvantagesSlider.controller.control = sAdvantagesBgSlider;
+	sAdvantagesBgSlider.controller.control = sAdvantagesSlider;
+
+	$(".sAdvantages__slide").click(function () {
 		sAdvantagesBgSlider.autoplay.start();
 		sAdvantagesSlider.autoplay.start();
 	})
@@ -349,7 +352,7 @@ function eventHandler() {
 
 	// modal window
 
-	
+
 
 };
 if (document.readyState !== 'loading') {
@@ -368,46 +371,45 @@ window.onload = function () {
 }
 
 if (document.querySelector("#map")) {
-	
+
 
 	ymaps.ready(function () {
 		var myMap = new ymaps.Map('map', {
-						center: [53.21288957121954,50.299305000000004],
-						zoom: 13,
-						controls: ['zoomControl']
-				}, {
-						//searchControlProvider: 'yandex#search'
-				}),
-				// Создаём макет содержимого.
-				// MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-				// 		'<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-				// ),
-	
-				myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-						hintContent: 'Поволжская Металлоломная Компания',
-						balloonContent: 'г. Самара, ул. Земеца, д. 32'
-				}, {
-						// Опции.
-						// Необходимо указать данный тип макета.
-						iconLayout: 'default#image',
-						// Своё изображение иконки метки.
-						iconImageHref: 'img/svg/logo.svg',
-						// Размеры метки.
-						iconImageSize: [60, 42],
-						// Смещение левого верхнего угла иконки относительно
-						// её "ножки" (точки привязки).
-						iconImageOffset: [-5, -38]
-				});
+			center: [53.21288957121954, 50.299305000000004],
+			zoom: 13,
+			controls: ['zoomControl']
+		}, {
+			//searchControlProvider: 'yandex#search'
+		}),
+			// Создаём макет содержимого.
+			// MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+			// 		'<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+			// ),
+
+			myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+				hintContent: 'Поволжская Металлоломная Компания',
+				balloonContent: 'г. Самара, ул. Земеца, д. 32'
+			}, {
+				// Опции.
+				// Необходимо указать данный тип макета.
+				iconLayout: 'default#image',
+				// Своё изображение иконки метки.
+				iconImageHref: 'img/svg/logo.svg',
+				// Размеры метки.
+				iconImageSize: [60, 42],
+				// Смещение левого верхнего угла иконки относительно
+				// её "ножки" (точки привязки).
+				iconImageOffset: [-5, -38]
+			});
 		myMap.behaviors.disable('scrollZoom');
 		//на мобильных устройствах... (проверяем по userAgent браузера)
-		if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-		//... отключаем перетаскивание карты
+		if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+			//... отключаем перетаскивание карты
 			myMap.behaviors.disable('drag');
 		}
 		myMap.geoObjects
-				.add(myPlacemark);
+			.add(myPlacemark);
 	});
-	
-	}
 
-	
+}
+
