@@ -323,26 +323,35 @@ function eventHandler() {
 	});
 
 	const sAdvantagesBgSlider = new Swiper('.sAdvantages__slider-bg--js', {
-		slidesPerView: 1,
-		lazy: {
-			loadPrevNext: true,
-		},
+		slidesPerView: 1, 
 		effect: 'fade',
 		fadeEffect: {
 			crossFade: true
 		},
-		watchOverflow: true,
+		thumbs: {
+			swiper: sAdvantagesSlider
+		},
+		// watchOverflow: true,
 		spaceBetween: 0,
 		autoplay: {
 			delay: 5000,
 		},
-		thumbs: {
-			swiper: sAdvantagesSlider
-		}
 	});
 
 	// sAdvantagesSlider.controller.control = sAdvantagesBgSlider;
-	sAdvantagesBgSlider.controller.control = sAdvantagesSlider;
+	// sAdvantagesBgSlider.controller.control = sAdvantagesSlider;
+
+	sAdvantagesBgSlider.on('slideChangeTransitionEnd', function () {
+		let index_currentSlide = sAdvantagesBgSlider.realIndex;
+		let currentSlide = sAdvantagesBgSlider.slides[index_currentSlide]
+		sAdvantagesSlider.slideTo(index_currentSlide, 1000, false);
+	});
+
+	sAdvantagesSlider.on('slideChangeTransitionEnd', function () {
+		let index_currentSlide = sAdvantagesSlider.realIndex;
+		let currentSlide = sAdvantagesSlider.slides[index_currentSlide]
+		sAdvantagesBgSlider.slideTo(index_currentSlide, 1000, false);
+	});
 
 	$(".sAdvantages__slide").click(function () {
 		sAdvantagesBgSlider.autoplay.start();

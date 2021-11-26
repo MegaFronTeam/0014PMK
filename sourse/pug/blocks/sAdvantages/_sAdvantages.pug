@@ -5,7 +5,7 @@ mixin sAdvantages(data)
 			.swiper-wrapper
 				- for (var x = 1; x < 5; x++)
 					+e.slide-bg.swiper-slide.bg-wrap
-						+pic(`sAdvantages-bg-${x}.jpg`,'bg').picture-bg
+						+pic(`sAdvantages-bg-${x}.jpg`,'bg',0).picture-bg
 		//- picture.picture-bg
 		//- 	source(type='image/webp' srcset='img/@2x/webp/sAdvantages-bg.webp' media='(min-width:992px)')
 		//- 	source(type='image/webp' srcset='img/@2x/webp/sAdvantages-bg-md.webp' media='(min-width:768px)')
