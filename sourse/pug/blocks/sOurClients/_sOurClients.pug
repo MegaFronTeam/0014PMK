@@ -14,12 +14,18 @@ mixin sOurClients(data)
 					mixin slide(i)
 						+e.slide.swiper-slide
 							+e.item
-								+pic(`sOurClients-${i}.png`, '', 0)
+								if i
+									+pic(`sOurClients-${i}.png`, '', 0)
+								block
 					+slide(1)
 					+slide(2)
 					+slide(3)
 					+slide(4)
-					+slide(1)
-					+slide(2)
+					+slide(5)
+					+slide(6)
+					+slide()
+						img.res-i(src="img/svg/sOurClients-8.svg", alt="")
+					+slide()
+						img.res-i(src="img/svg/sOurClients-9.svg", alt="")
 					
 
